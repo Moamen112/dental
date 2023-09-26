@@ -26,22 +26,22 @@ const NavBar = () => {
 			<NavList className={`menu ${mobileMenuVisible ? "show" : ""}`}>
 				<NavItem
 					exact
-					to="/dental"
+					to="/"
 					activeClassName="active">
 					Home
 				</NavItem>
 				<NavItem
-					to="/dental/about"
+					to="/about"
 					activeClassName="active">
 					About us
 				</NavItem>
 				<NavItem
-					to="/dental/services"
+					to="/services"
 					activeClassName="active">
 					Services
 				</NavItem>
 				<NavItem
-					to="/dental	/contact"
+					to="/contact"
 					activeClassName="active">
 					Contact Us
 				</NavItem>
@@ -74,23 +74,23 @@ const NavBar = () => {
 					<MobileMenu>
 						<MenuItem
 							onClick={handleMobileMenuClose}
-							to="/dental"
+							to="/"
 							exact>
 							Home
 						</MenuItem>
 						<MenuItem
 							onClick={handleMobileMenuClose}
-							to="/dental/about">
+							to="/about">
 							About us
 						</MenuItem>
 						<MenuItem
 							onClick={handleMobileMenuClose}
-							to="/dental/services">
+							to="/services">
 							Services
 						</MenuItem>
 						<MenuItem
 							onClick={handleMobileMenuClose}
-							to="/dental/contact">
+							to="/contact">
 							Contact Us
 						</MenuItem>
 					</MobileMenu>
