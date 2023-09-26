@@ -25,19 +25,19 @@ function App() {
 				<Routes>
 					<Route
 						exact
-						path="/"
+						path="/dental"
 						element={<Home />}
 					/>
 					<Route
-						path="/about"
+						path="/dental/about"
 						element={<AboutUs />}
 					/>
 					<Route
-						path="/services"
+						path="/dental/services"
 						element={<Services />}
 					/>
 					<Route
-						path="/contact"
+						path="/dental/contact"
 						element={<Contact />}
 					/>
 				</Routes>

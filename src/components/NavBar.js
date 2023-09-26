@@ -74,23 +74,23 @@ const NavBar = () => {
 					<MobileMenu>
 						<MenuItem
 							onClick={handleMobileMenuClose}
-							to="/"
+							to="/dental"
 							exact>
 							Home
 						</MenuItem>
 						<MenuItem
 							onClick={handleMobileMenuClose}
-							to="/about">
+							to="/dental/about">
 							About us
 						</MenuItem>
 						<MenuItem
 							onClick={handleMobileMenuClose}
-							to="/services">
+							to="/dental/services">
 							Services
 						</MenuItem>
 						<MenuItem
 							onClick={handleMobileMenuClose}
-							to="/contact">
+							to="/dental/contact">
 							Contact Us
 						</MenuItem>
 					</MobileMenu>
