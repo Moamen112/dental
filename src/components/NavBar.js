@@ -146,7 +146,7 @@ const Logo = styled.div`
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 100%;
-	width: 25%;
+	width: 33%;
 
 	@media (max-width: 768px) {
 		width: 45%;
@@ -160,6 +160,12 @@ const NavList = styled.ul`
 	width: 33%;
 	gap: 20px;
 	justify-content: center;
+	color: #000;
+	font-family: Manrope;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 24px;
 
 	@media (max-width: 1200px) {
 		font-size: 12px;
@@ -182,7 +188,6 @@ const NavItem = styled(NavLink)`
 
 const ToggleButton = styled.div`
 	display: none;
-
 	cursor: pointer;
 	padding: 0 70px;
 `;

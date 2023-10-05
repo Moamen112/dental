@@ -407,6 +407,8 @@ const TextArea = styled.textarea`
 	width: 96%;
 	height: 90%;
 	padding: 10px;
+	border: 0;
+	resize: none;
 
 	@media (max-width: 768px) {
 		width: 91%;
@@ -416,6 +418,7 @@ const TextArea = styled.textarea`
 const TextInput = styled.input`
 	width: 90%;
 	padding: 10px 10px;
+	border: 0;
 `;
 
 const Label = styled.label`

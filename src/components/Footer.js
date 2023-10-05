@@ -92,10 +92,13 @@ const Footer = () => {
 					<FooterListItems>
 						<div>略</div>+01234 567 890
 					</FooterListItems>
+					<FooterListItems></FooterListItems>
+					<FooterListItems></FooterListItems>
+					<FooterListItems></FooterListItems>
 				</FooterList>
 			</FooterBody>
 			<FooterCopyRight>
-				<p>Copyright © 2023. All rights reserved</p>
+				<p>Copyright © 2023. All rights reserved adsadasd</p>
 			</FooterCopyRight>
 		</FooterContainer>
 	);
@@ -137,7 +140,6 @@ const FooterBody = styled.div`
 `;
 const FooterCopyRight = styled.div`
 	display: flex;
-	width: 226.78px;
 	height: 15px;
 	flex-direction: column;
 	justify-content: center;

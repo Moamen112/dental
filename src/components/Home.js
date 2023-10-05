@@ -27,7 +27,7 @@ const Home = () => {
 				{/* Right Section */}
 				<RightSection>
 					<HeaderImage
-						src="/imgs/header.svg"
+						src="https://Moamen112.github.io/dental/imgs/header.svg"
 						alt="Header Image"
 					/>
 				</RightSection>
@@ -37,7 +37,7 @@ const Home = () => {
 					<ServiceIcon>
 						{/* Add your icon for the first service */}
 						<img
-							src="/imgs/services1.svg"
+							src="https://Moamen112.github.io/dental/imgs/services1.svg"
 							alt="Service 1"
 						/>
 					</ServiceIcon>
@@ -51,7 +51,7 @@ const Home = () => {
 					<ServiceIcon>
 						{/* Add your icon for the second service */}
 						<img
-							src="/imgs/services2.svg"
+							src="https://Moamen112.github.io/dental/imgs/services2.svg"
 							alt="Service 2"
 						/>
 					</ServiceIcon>
@@ -65,7 +65,7 @@ const Home = () => {
 					<ServiceIcon>
 						{/* Add your icon for the third service */}
 						<img
-							src="/imgs/services3.svg"
+							src="https://Moamen112.github.io/dental/imgs/services3.svg"
 							alt="Service 3"
 						/>
 					</ServiceIcon>
@@ -80,7 +80,7 @@ const Home = () => {
 				<Feature>
 					<FeatureLeft className="hidden">
 						<FeatureImage
-							src="/imgs/feature1.svg"
+							src="https://Moamen112.github.io/dental/imgs/feature1.svg"
 							alt="Feature 1"
 						/>
 					</FeatureLeft>
@@ -146,11 +146,11 @@ const Home = () => {
 						<PercentageBarContainer>
 							<PercentageTitle>
 								<Title>{"Dental and Mouth Care"}</Title>
-								<Percentage>{95}%</Percentage>
+								<Percentage>{50}%</Percentage>
 							</PercentageTitle>
 							<PercentageBar>
 								<FilledPercentage
-									percentage={95}></FilledPercentage>
+									percentage={50}></FilledPercentage>
 							</PercentageBar>
 						</PercentageBarContainer>
 						<PercentageBarContainer>
@@ -166,7 +166,7 @@ const Home = () => {
 					</FeatureRightPercentage>
 					<FeatureServices>
 						<FeatureImageService
-							src="/imgs/feature2.svg"
+							src="https://Moamen112.github.io/dental/imgs/feature2.svg"
 							alt="Feature 1"
 						/>
 						<FeatureService>
@@ -201,18 +201,13 @@ const Home = () => {
 				<Feature>
 					<FeatureMembers>
 						<FeatureMember>
-							<img
-								src="/imgs/member1.svg"
-								alt="#"
-							/>
+							<div className="member-img1"></div>
+
 							<h3>Sara Ehab</h3>
 							<p className="member">cardiology & neurology</p>
 						</FeatureMember>
 						<FeatureMember>
-							<img
-								src="/imgs/member2.svg"
-								alt="#"
-							/>
+							<div className="member-img2"></div>
 							<h3>Amr Ahmed</h3>
 							<p className="member">cardiology & neurology</p>
 						</FeatureMember>
@@ -236,7 +231,7 @@ const Home = () => {
 				<Counters>
 					<Counter>
 						<CounterImage
-							src="/imgs/Tooth-white.svg"
+							src="https://Moamen112.github.io/dental/imgs/Tooth-white.svg"
 							alt="Counter 1"
 						/>
 						<CounterDesc>
@@ -248,7 +243,9 @@ const Home = () => {
 					</Counter>
 					<Counter>
 						<CounterImage
-							src={"/imgs/clinic-1.svg"}
+							src={
+								"https://Moamen112.github.io/dental/imgs/clinic-1.svg"
+							}
 							alt="Counter 2"
 						/>
 						<CounterDesc>
@@ -260,7 +257,9 @@ const Home = () => {
 					</Counter>
 					<Counter>
 						<CounterImage
-							src={"/imgs/dentist-white.svg"}
+							src={
+								"https://Moamen112.github.io/dental/imgs/dentist-white.svg"
+							}
 							alt="Counter 3"
 						/>
 						<CounterDesc>
@@ -272,7 +271,9 @@ const Home = () => {
 					</Counter>
 					<Counter>
 						<CounterImage
-							src={"/imgs/scedule-white.svg"}
+							src={
+								"https://Moamen112.github.io/dental/imgs/scedule-white.svg"
+							}
 							alt="Counter 4"
 						/>
 						<CounterDesc>
@@ -300,7 +301,7 @@ const Home = () => {
 					{/* First Row */}
 					<OfferingBox>
 						<OfferingImage
-							src="/imgs/offer2.svg"
+							src="https://Moamen112.github.io/dental/imgs/offer2.svg"
 							alt="Offering 2"
 						/>
 						<h3>Teeth Checkup</h3>
@@ -319,7 +320,7 @@ const Home = () => {
 					</OfferingBox>
 					<OfferingBox>
 						<OfferingImage
-							src="/imgs/offer2.svg"
+							src="https://Moamen112.github.io/dental/imgs/offer2.svg"
 							alt="Offering 2"
 						/>
 						<h3>Teeth Whitening</h3>
@@ -338,7 +339,7 @@ const Home = () => {
 					</OfferingBox>
 					<OfferingBox>
 						<OfferingImage
-							src="/imgs/offer3.svg"
+							src="https://Moamen112.github.io/dental/imgs/offer3.svg"
 							alt="Offering 2"
 						/>
 						<h3>Dental Checkup</h3>
@@ -555,7 +556,8 @@ const LeftSection = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 0 0px 0 15%;
+	margin: 60px auto;
+	padding: 0 0 0 8%;
 	justify-content: center;
 	width: 35%;
 	gap: 20px;
@@ -579,6 +581,7 @@ const RightSection = styled.div`
 	height: 100%;
 	display: flex;
 	justify-content: center;
+	order: 1;
 
 	@media (max-width: 768px) {
 		width: 100%;
@@ -777,6 +780,7 @@ const FeatureServiceList = styled.ul`
 	display: flex;
 	flex-direction: column;
 	padding: 0;
+
 	align-items: center;
 	gap: 10px;
 
@@ -834,12 +838,13 @@ const FeatureRightPercentage = styled.div`
 
 const FeatureList = styled.ul`
 	list-style: none;
-	padding: 0;
+	padding: 10px 5px;
 	display: flex;
 	flex-wrap: wrap;
+	gap: 5px;
 	width: 100%;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-between;
 `;
 
 const CheckItem = styled.li`
@@ -914,6 +919,19 @@ const FeatureMembers = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+
+	.member-img1 {
+		width: 100%;
+		height: 100%;
+		background-image: url("/imgs/member1.svg");
+	}
+
+	.member-img2 {
+		width: 100%;
+		height: 300px;
+		background-size: cover;
+		background-image: url("/imgs/member2.svg");
+	}
 
 	@media (max-width: 768px) {
 		flex-direction: column;
@@ -1228,7 +1246,7 @@ const ContactContainer = styled.div`
 	height: 540px;
 	background-image: url("/imgs/contactbackground.svg");
 	background-size: cover;
-
+	background-color: #f1f8ff;
 	@media (max-width: 768px) {
 		height: auto;
 		flex-direction: column;
@@ -1239,7 +1257,8 @@ const ContactLeftSection = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 0 0px 0 15%;
+	margin: 60px auto;
+	padding: 0 0 0 8%;
 	justify-content: center;
 	width: 35%;
 	gap: 20px;

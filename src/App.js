@@ -1,13 +1,8 @@
 // App.js
 import React from "react";
-import {
-	BrowserRouter as Router,
-	Route,
-	Routes,
-	Navigate,
-	useNavigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import GlobalStyles from "./components/GlobalStyles"; // Import the GlobalStyles component
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
@@ -19,29 +14,28 @@ function App() {
 	return (
 		<Router>
 			<div className="App">
+				<GlobalStyles /> {/* Include the GlobalStyles component */}
 				<NavBar />
-
 				{/* Define your routes */}
 				<Routes>
 					<Route
 						exact
-						path="/"
+						path="https://Moamen112.github.io/dental/"
 						element={<Home />}
 					/>
 					<Route
-						path="/about"
+						path="https://Moamen112.github.io/dental/about"
 						element={<AboutUs />}
 					/>
 					<Route
-						path="/services"
+						path="https://Moamen112.github.io/dental/services"
 						element={<Services />}
 					/>
 					<Route
-						path="/contact"
+						path="https://Moamen112.github.io/dental/contact"
 						element={<Contact />}
 					/>
 				</Routes>
-
 				<Footer />
 			</div>
 		</Router>

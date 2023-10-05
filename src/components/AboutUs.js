@@ -355,6 +355,7 @@ const VideoDescriptionListItems = styled.li`
 		font-size: 16px;
 		font-style: normal;
 		font-weight: 400;
+		padding: 0 18px;
 		line-height: 181%; /* 28.96px */
 		list-style: circle;
 	}
