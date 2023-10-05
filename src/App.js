@@ -24,7 +24,7 @@ function App() {
 						element={<Home />}
 					/>
 					<Route
-						path="/about"
+						path="/dental/about"
 						element={<AboutUs />}
 					/>
 					<Route
