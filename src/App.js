@@ -20,19 +20,19 @@ function App() {
 				<Routes>
 					<Route
 						exact
-						path="https://Moamen112.github.io/dental/"
+						path="/dental"
 						element={<Home />}
 					/>
 					<Route
-						path="https://Moamen112.github.io/dental/about"
+						path="/about"
 						element={<AboutUs />}
 					/>
 					<Route
-						path="https://Moamen112.github.io/dental/services"
+						path="/services"
 						element={<Services />}
 					/>
 					<Route
-						path="https://Moamen112.github.io/dental/contact"
+						path="/contact"
 						element={<Contact />}
 					/>
 				</Routes>
