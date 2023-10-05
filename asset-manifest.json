@@ -1,15 +1,17 @@
 {
   "files": {
     "main.css": "/dental/static/css/main.49b7ef7b.css",
-    "main.js": "/dental/static/js/main.7042bc31.js",
+    "main.js": "/dental/static/js/main.ab7ed97d.js",
     "static/js/787.bdc5b345.chunk.js": "/dental/static/js/787.bdc5b345.chunk.js",
+    "static/media/Manrope-Regular.ttf": "/dental/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
+    "static/media/Manrope-Bold.ttf": "/dental/static/media/Manrope-Bold.47f6d7143da9d8c0e480.ttf",
     "index.html": "/dental/index.html",
     "main.49b7ef7b.css.map": "/dental/static/css/main.49b7ef7b.css.map",
-    "main.7042bc31.js.map": "/dental/static/js/main.7042bc31.js.map",
+    "main.ab7ed97d.js.map": "/dental/static/js/main.ab7ed97d.js.map",
     "787.bdc5b345.chunk.js.map": "/dental/static/js/787.bdc5b345.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.49b7ef7b.css",
-    "static/js/main.7042bc31.js"
+    "static/js/main.ab7ed97d.js"
   ]
 }
