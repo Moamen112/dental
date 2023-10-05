@@ -28,11 +28,11 @@ function App() {
 						element={<AboutUs />}
 					/>
 					<Route
-						path="/services"
+						path="/dental/services"
 						element={<Services />}
 					/>
 					<Route
-						path="/contact"
+						path="/dental/contact"
 						element={<Contact />}
 					/>
 				</Routes>
