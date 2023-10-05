@@ -26,7 +26,7 @@ const NavBar = () => {
 			<NavList className={`menu ${mobileMenuVisible ? "show" : ""}`}>
 				<NavItem
 					exact
-					to="/dental"
+					to="https://moamen112.github.io/dental/"
 					activeClassName="active">
 					Home
 				</NavItem>
