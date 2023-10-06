@@ -26,7 +26,7 @@ const NavBar = () => {
 			<NavList className={`menu ${mobileMenuVisible ? "show" : ""}`}>
 				<NavItem
 					exact
-					to="/dental"
+					to="/"
 					activeClassName="active">
 					Home
 				</NavItem>
