@@ -43,9 +43,9 @@ const AboutUs = () => {
 						<video
 							id="aboutVideo"
 							controls={isPlaying ? "controls" : ""}
-							poster="/imgs/videoPhoto.svg">
+							poster="https://Moamen112.github.io/dental/imgs/videoPhoto.svg">
 							<source
-								src="/imgs/video.mp4"
+								src="https://Moamen112.github.io/dental/imgs/video.mp4"
 								type="video/mp4"
 							/>
 							Your browser does not support the video tag.
@@ -272,14 +272,14 @@ const Header = styled.div`
 	align-items: center;
 	height: 531px;
 	background-color: #fff;
-	background-image: url("/imgs/doctors.svg");
+	background-image: url("https://Moamen112.github.io/dental/imgs/doctors.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
 	@media (max-width: 768px) {
 		width: 100%;
 		height: 200px;
-		background-image: url("/imgs/doctor1.svg");
+		background-image: url("https://Moamen112.github.io/dental/imgs/doctor1.svg");
 		box-sizing: border-box;
 	}
 `;

@@ -9,7 +9,7 @@ const Footer = () => {
 				<FooterLogoList>
 					<FooterLogoListItems>
 						<img
-							src="/imgs/footerlogo.svg"
+							src="https://Moamen112.github.io/dental/imgs/footerlogo.svg"
 							alt="logo"
 						/>
 					</FooterLogoListItems>
@@ -19,19 +19,19 @@ const Footer = () => {
 					<FooterLogoListItems>
 						<SocialIcons>
 							<img
-								src="/imgs/facebook.svg"
+								src="https://Moamen112.github.io/dental/imgs/facebook.svg"
 								alt="fb"
 							/>
 						</SocialIcons>
 						<SocialIcons>
 							<img
-								src="/imgs/instgram.svg"
+								src="https://Moamen112.github.io/dental/imgs/instgram.svg"
 								alt="fb"
 							/>
 						</SocialIcons>
 						<SocialIcons>
 							<img
-								src="/imgs/ln.svg"
+								src="https://Moamen112.github.io/dental/imgs/ln.svg"
 								alt="fb"
 							/>
 						</SocialIcons>

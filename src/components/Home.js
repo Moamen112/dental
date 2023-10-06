@@ -359,7 +359,7 @@ const Home = () => {
 					{/* Second Row */}
 					<OfferingBox>
 						<OfferingImage
-							src="/imgs/offer4.svg"
+							src="https://Moamen112.github.io/dental/imgs/offer4.svg"
 							alt="Offering 2"
 						/>
 						<h3>Teeth Implants</h3>
@@ -378,7 +378,7 @@ const Home = () => {
 					</OfferingBox>
 					<OfferingBox>
 						<OfferingImage
-							src="/imgs/offer5.svg"
+							src="https://Moamen112.github.io/dental/imgs/offer5.svg"
 							alt="Offering 2"
 						/>
 						<h3>Dental Filling</h3>
@@ -397,7 +397,7 @@ const Home = () => {
 					</OfferingBox>
 					<OfferingBox>
 						<OfferingImage
-							src="/imgs/offer6.svg"
+							src="https://Moamen112.github.io/dental/imgs/offer6.svg"
 							alt="Offering 2"
 						/>
 						<h3>Cosmetic</h3>
@@ -431,13 +431,13 @@ const Home = () => {
 					{/* Review Box 1 */}
 					<ReviewBox>
 						<ReviewImage
-							src="/imgs/review1.svg"
+							src="https://Moamen112.github.io/dental/imgs/review1.svg"
 							alt="Review 1"
 						/>
 						<ReviewName>
 							<h3>Muhammed Kamal</h3>
 							<img
-								src="/imgs/review.svg"
+								src="https://Moamen112.github.io/dental/imgs/review.svg"
 								alt="icon"
 							/>
 						</ReviewName>
@@ -452,13 +452,13 @@ const Home = () => {
 					{/* Review Box 2 */}
 					<ReviewBox>
 						<ReviewImage
-							src="/imgs/review2.svg"
+							src="https://Moamen112.github.io/dental/imgs/review2.svg"
 							alt="Review 2"
 						/>
 						<ReviewName>
 							<h3>Muhammed Kamal</h3>
 							<img
-								src="/imgs/review.svg"
+								src="https://Moamen112.github.io/dental/imgs/review.svg"
 								alt="icon"
 							/>
 						</ReviewName>
@@ -473,13 +473,13 @@ const Home = () => {
 					{/* Review Box 3 */}
 					<ReviewBox>
 						<ReviewImage
-							src="/imgs/review3.svg"
+							src="https://Moamen112.github.io/dental/imgs/review3.svg"
 							alt="Review 3"
 						/>
 						<ReviewName>
 							<h3>Nada Abdelnasser</h3>
 							<img
-								src="/imgs/review.svg"
+								src="https://Moamen112.github.io/dental/imgs/review.svg"
 								alt="icon"
 							/>
 						</ReviewName>
@@ -510,7 +510,7 @@ const Home = () => {
 				{/* Right Section */}
 				<ContactRightSection className="hidden">
 					<ContactImage
-						src="/imgs/contact.svg"
+						src="https://Moamen112.github.io/dental/imgs/contact.svg"
 						alt="Header Image"
 					/>
 				</ContactRightSection>
@@ -923,14 +923,14 @@ const FeatureMembers = styled.div`
 	.member-img1 {
 		width: 100%;
 		height: 100%;
-		background-image: url("/imgs/member1.svg");
+		background-image: url("https://Moamen112.github.io/dental/imgs/member1.svg");
 	}
 
 	.member-img2 {
 		width: 100%;
 		height: 300px;
 		background-size: cover;
-		background-image: url("/imgs/member2.svg");
+		background-image: url("https://Moamen112.github.io/dental/imgs/member2.svg");
 	}
 
 	@media (max-width: 768px) {
@@ -1244,7 +1244,7 @@ const ContactContainer = styled.div`
 	align-items: center;
 	margin: 60px auto;
 	height: 540px;
-	background-image: url("/imgs/contactbackground.svg");
+	background-image: url("https://Moamen112.github.io/dental/imgs/contactbackground.svg");
 	background-size: cover;
 	background-color: #f1f8ff;
 	@media (max-width: 768px) {

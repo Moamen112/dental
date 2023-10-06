@@ -226,14 +226,14 @@ const Header = styled.div`
 	align-items: center;
 	height: 315px;
 	background-color: #fff;
-	background-image: url("/imgs/contact3.svg");
+	background-image: url("https://Moamen112.github.io/dental/imgs/contact3.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
 	@media (max-width: 768px) {
 		width: 100%;
 		height: 200px;
-		background-image: url("/imgs/contact3.svg");
+		background-image: url("https://Moamen112.github.io/dental/imgs/contact3.svg");
 		box-sizing: border-box;
 	}
 `;

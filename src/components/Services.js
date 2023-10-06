@@ -27,7 +27,7 @@ const Services = () => {
 					{/* First Row */}
 					<OfferingBox>
 						<OfferingImage
-							src="/imgs/offer2.svg"
+							src="https://Moamen112.github.io/dental/imgs/offer2.svg"
 							alt="Offering 2"
 						/>
 						<h3>Teeth Checkup</h3>
@@ -46,7 +46,7 @@ const Services = () => {
 					</OfferingBox>
 					<OfferingBox>
 						<OfferingImage
-							src="/imgs/offer2.svg"
+							src="https://Moamen112.github.io/dental/imgs/offer2.svg"
 							alt="Offering 2"
 						/>
 						<h3>Teeth Whitening</h3>
@@ -65,7 +65,7 @@ const Services = () => {
 					</OfferingBox>
 					<OfferingBox>
 						<OfferingImage
-							src="/imgs/offer3.svg"
+							src="https://Moamen112.github.io/dental/imgs/offer3.svg"
 							alt="Offering 2"
 						/>
 						<h3>Dental Checkup</h3>
@@ -85,7 +85,7 @@ const Services = () => {
 					{/* Second Row */}
 					<OfferingBox>
 						<OfferingImage
-							src="/imgs/offer4.svg"
+							src="https://Moamen112.github.io/dental/imgs/offer4.svg"
 							alt="Offering 2"
 						/>
 						<h3>Teeth Implants</h3>
@@ -104,7 +104,7 @@ const Services = () => {
 					</OfferingBox>
 					<OfferingBox>
 						<OfferingImage
-							src="/imgs/offer5.svg"
+							src="https://Moamen112.github.io/dental/imgs/offer5.svg"
 							alt="Offering 2"
 						/>
 						<h3>Dental Filling</h3>
@@ -123,7 +123,7 @@ const Services = () => {
 					</OfferingBox>
 					<OfferingBox>
 						<OfferingImage
-							src="/imgs/offer6.svg"
+							src="https://Moamen112.github.io/dental/imgs/offer6.svg"
 							alt="Offering 2"
 						/>
 						<h3>Cosmetic</h3>
@@ -146,7 +146,7 @@ const Services = () => {
 				<Counters>
 					<Counter>
 						<CounterImage
-							src="/imgs/Tooth-white.svg"
+							src="https://Moamen112.github.io/dental/imgs/Tooth-white.svg"
 							alt="Counter 1"
 						/>
 						<CounterDesc>
@@ -158,7 +158,9 @@ const Services = () => {
 					</Counter>
 					<Counter>
 						<CounterImage
-							src={"/imgs/clinic-1.svg"}
+							src={
+								"https://Moamen112.github.io/dental/imgs/clinic-1.svg"
+							}
 							alt="Counter 2"
 						/>
 						<CounterDesc>
@@ -170,7 +172,9 @@ const Services = () => {
 					</Counter>
 					<Counter>
 						<CounterImage
-							src={"/imgs/dentist-white.svg"}
+							src={
+								"https://Moamen112.github.io/dental/imgs/dentist-white.svg"
+							}
 							alt="Counter 3"
 						/>
 						<CounterDesc>
@@ -182,7 +186,9 @@ const Services = () => {
 					</Counter>
 					<Counter>
 						<CounterImage
-							src={"/imgs/scedule-white.svg"}
+							src={
+								"https://Moamen112.github.io/dental/imgs/scedule-white.svg"
+							}
 							alt="Counter 4"
 						/>
 						<CounterDesc>
@@ -264,14 +270,14 @@ const Header = styled.div`
 	align-items: center;
 	height: 531px;
 	background-color: #fff;
-	background-image: url("/imgs/services.svg");
+	background-image: url("https://Moamen112.github.io/dental/imgs/services.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
 	@media (max-width: 768px) {
 		width: 100%;
 		height: 200px;
-		background-image: url("/imgs/services1.png");
+		background-image: url("https://Moamen112.github.io/dental/imgs/services1.png");
 		box-sizing: border-box;
 	}
 `;
@@ -482,14 +488,14 @@ const WorkingHours = styled.div`
 	margin: 60px auto;
 	height: 531px;
 	background-color: #fff;
-	background-image: url("/imgs/hours.svg");
+	background-image: url("https://Moamen112.github.io/dental/imgs/hours.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
 	@media (max-width: 768px) {
 		width: 100%;
 		height: 200px;
-		background-image: url("/imgs/hours.svg");
+		background-image: url("https://Moamen112.github.io/dental/imgs/hours.svg");
 		box-sizing: border-box;
 	}
 `;
