@@ -1609,7 +1609,8 @@ const ContactContainer = styled.div`
 
 const ContactLeftSection = styled.div`
 	display: flex;
-	transform: scaleX(-1);
+	${(props) =>
+		props.selectedLanguage === "AR" ? "transform: scaleX(-1);" : ""}
 	flex-direction: column;
 	align-items: flex-start;
 	margin: 60px auto;
@@ -1637,7 +1638,8 @@ const ContactLeftSection = styled.div`
 const ContactRightSection = styled.div`
 	/* Add styling for the right section, like width and padding */
 	width: 50%;
-	transform: scaleX(-1);
+	${(props) =>
+		props.selectedLanguage === "AR" ? "transform: scaleX(-1);" : ""}
 	height: 100%;
 	display: flex;
 	justify-content: center;
