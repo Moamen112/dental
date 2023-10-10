@@ -1,5 +1,5 @@
 // App.js
-import React from "react";
+import React, { useState } from "react";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import GlobalStyles from "./components/GlobalStyles"; // Import the GlobalStyles component
@@ -11,17 +11,24 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 
 function App() {
+	const [selectedLanguage, setSelectedLanguage] = useState("EN");
+	const handleLanguageChange = (language) => {
+		setSelectedLanguage(language);
+	};
 	return (
 		<Router>
 			<div className="App">
 				<GlobalStyles /> {/* Include the GlobalStyles component */}
-				<NavBar />
+				<NavBar
+					changeLanguage={handleLanguageChange}
+					selectedLanguage={selectedLanguage}
+				/>
 				{/* Define your routes */}
 				<Routes>
 					<Route
 						exact
 						path="/"
-						element={<Home />}
+						element={<Home selectedLanguage={selectedLanguage} />}
 					/>
 					<Route
 						path="/about"

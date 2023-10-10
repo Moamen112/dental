@@ -2,32 +2,69 @@ import React from "react";
 import styled from "styled-components";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import contentObject from "../content/contentObject";
+import translatedContent from "../content/translatedContent ";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-const Home = () => {
+const Home = (props) => {
+	const {
+		header,
+		services,
+		features,
+		counters,
+		offerings,
+		reviews,
+		contact,
+	} = contentObject;
+
+	const {
+		ARheader,
+		ARservices,
+		ARfeatures,
+		ARcounters,
+		ARofferings,
+		ARreviews,
+		ARcontact,
+	} = translatedContent;
+
 	return (
-		<HomeContainer>
+		<HomeContainer selectedLanguage={props.selectedLanguage}>
 			<Header>
 				{/* Left Section */}
-				<LeftSection>
+				<LeftSection selectedLanguage={props.selectedLanguage}>
 					<SmallText className="welcome">
-						👋Hey! We Are Dentic
+						{props.selectedLanguage === "AR"
+							? ARheader.welcome
+							: header.welcome}
 					</SmallText>
 					<HeaderText>
-						Your trusted partner for healthy and beautiful{" "}
-						<span>Smiles...</span>
+						{props.selectedLanguage === "AR"
+							? ARheader.headerText
+							: header.headerText}
+						<span>
+							{props.selectedLanguage === "AR"
+								? "وجميلة...."
+								: "Smiles..."}
+						</span>
 					</HeaderText>
 					<SmallText>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing
-						elit. Aenean commodo ligula eget dolor. Aenean massa.
-						Cum sociis natoque penatibus et magnis dis parturient.
+						{props.selectedLanguage === "AR"
+							? ARheader.description
+							: header.description}
 					</SmallText>
-					<Button>Show More..</Button>
+					<Button>
+						{props.selectedLanguage === "AR"
+							? ARheader.button
+							: header.button}
+					</Button>
 				</LeftSection>
 
 				{/* Right Section */}
 				<RightSection>
 					<HeaderImage
-						src="https://Moamen112.github.io/dental/imgs/header.svg"
+						src={
+							"https://Moamen112.github.io/dental/imgs/header.svg"
+						}
 						alt="Header Image"
 					/>
 				</RightSection>
@@ -41,10 +78,15 @@ const Home = () => {
 							alt="Service 1"
 						/>
 					</ServiceIcon>
-					<ServiceHeader>Affordable Price</ServiceHeader>
+					<ServiceHeader>
+						{props.selectedLanguage === "AR"
+							? ARservices.service1.header
+							: services.service1.header}
+					</ServiceHeader>
 					<ServiceDescription>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Ut elit tellus nec.
+						{props.selectedLanguage === "AR"
+							? ARservices.service1.description
+							: services.service1.description}
 					</ServiceDescription>
 				</Service>
 				<Service>
@@ -55,10 +97,15 @@ const Home = () => {
 							alt="Service 2"
 						/>
 					</ServiceIcon>
-					<ServiceHeader>Professional Dentist</ServiceHeader>
+					<ServiceHeader>
+						{props.selectedLanguage === "AR"
+							? ARservices.service2.header
+							: services.service2.header}
+					</ServiceHeader>
 					<ServiceDescription>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Ut elit tellus nec.
+						{props.selectedLanguage === "AR"
+							? ARservices.service2.description
+							: services.service2.description}
 					</ServiceDescription>
 				</Service>
 				<Service>
@@ -69,10 +116,15 @@ const Home = () => {
 							alt="Service 3"
 						/>
 					</ServiceIcon>
-					<ServiceHeader>Satisfactory Service</ServiceHeader>
+					<ServiceHeader>
+						{props.selectedLanguage === "AR"
+							? ARservices.service3.header
+							: services.service3.header}
+					</ServiceHeader>
 					<ServiceDescription>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Ut elit tellus nec.
+						{props.selectedLanguage === "AR"
+							? ARservices.service3.description
+							: services.service3.description}
 					</ServiceDescription>
 				</Service>
 			</Services>
@@ -86,81 +138,149 @@ const Home = () => {
 					</FeatureLeft>
 					<FeatureRight>
 						<SmallText className="welcome responsiveText">
-							More About Us
+							{props.selectedLanguage === "AR"
+								? ARfeatures.feature1.welcome
+								: features.feature1.welcome}
 						</SmallText>
 						<HeaderText>
-							The Best Dental Clinic That You Can Trust
+							{props.selectedLanguage === "AR"
+								? ARfeatures.feature1.headerText
+								: features.feature1.headerText}
 						</HeaderText>
 						<SmallText>
-							Lorem ipsum dolor sit amet, consectetuer adipiscing
-							elit. Aenean commodo ligula eget dolor. Aenean
-							massa. Cum sociis natoque penatibus et magnis dis
-							parturient.
+							{props.selectedLanguage === "AR"
+								? ARfeatures.feature1.description
+								: features.feature1.description}
 						</SmallText>
 						<br />
 						<SmallText>
-							Nullam quis ante. Etiam sit amet orci eget eros
-							faucibus tincidunt. Duis leo. Sed fringilla mauris
-							sit amet nibh.
+							{props.selectedLanguage === "AR"
+								? ARfeatures.feature1.smallText
+								: features.feature1.smallText}
 						</SmallText>
 						<FeatureList>
 							<CheckItem>
 								<CheckCircleIcon
 									sx={{ fontSize: "16px", color: "#3d75c3" }}
 								/>
-								Modern Equipment
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature1.featureList
+											.featureList1.text
+									: features.feature1.featureList.featureList1
+											.text}
 							</CheckItem>
 							<CheckItem>
 								<CheckCircleIcon
 									sx={{ fontSize: "16px", color: "#3d75c3" }}
 								/>
-								Easy Online Appointment
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature1.featureList
+											.featureList2.text
+									: features.feature1.featureList.featureList2
+											.text}
 							</CheckItem>
 							<CheckItem>
 								<CheckCircleIcon
 									sx={{ fontSize: "16px", color: "#3d75c3" }}
 								/>
-								Comfortable CIinic
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature1.featureList
+											.featureList3.text
+									: features.feature1.featureList.featureList3
+											.text}
 							</CheckItem>
 							<CheckItem>
 								<CheckCircleIcon
 									sx={{ fontSize: "16px", color: "#3d75c3" }}
 								/>
-								Always Monitored
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature1.featureList
+											.featureList4.text
+									: features.feature1.featureList.featureList4
+											.text}
 							</CheckItem>
 						</FeatureList>
-						<FeatureButton>Show More..</FeatureButton>
+						<FeatureButton>
+							{props.selectedLanguage === "AR"
+								? ARfeatures.feature1.button
+								: features.feature1.button}
+						</FeatureButton>
 					</FeatureRight>
 				</Feature>
 				<Feature>
 					<FeatureRightPercentage>
-						<SmallText className="welcome">Why Choose Us</SmallText>
-						<HeaderText>Helping Your Dental Problems</HeaderText>
+						<SmallText className="welcome">
+							{props.selectedLanguage === "AR"
+								? ARfeatures.feature2.welcome
+								: features.feature2.welcome}
+						</SmallText>
+						<HeaderText>
+							{props.selectedLanguage === "AR"
+								? ARfeatures.feature2.headerText
+								: features.feature2.headerText}
+						</HeaderText>
 						<SmallText>
-							Lorem ipsum dolor sit amet, consectetuer adipiscing
-							elit. Aenean commodo ligula eget dolor. Aenean
-							massa. Cum sociis natoque penatibus et magnis dis
-							parturient.
+							{props.selectedLanguage === "AR"
+								? ARfeatures.feature2.description
+								: features.feature2.description}
 						</SmallText>
 
 						<PercentageBarContainer>
 							<PercentageTitle>
-								<Title>{"Dental and Mouth Care"}</Title>
-								<Percentage>{50}%</Percentage>
+								<Title>
+									{props.selectedLanguage === "AR"
+										? ARfeatures.feature2.percentages
+												.percentage1.title
+										: features.feature2.percentages
+												.percentage1.title}
+								</Title>
+								<Percentage>
+									{props.selectedLanguage === "AR"
+										? ARfeatures.feature2.percentages
+												.percentage1.percentage
+										: features.feature2.percentages
+												.percentage1.percentage}
+									%
+								</Percentage>
 							</PercentageTitle>
 							<PercentageBar>
 								<FilledPercentage
-									percentage={50}></FilledPercentage>
+									percentage={
+										props.selectedLanguage === "AR"
+											? ARfeatures.feature2.percentages
+													.percentage1.percentage
+											: features.feature2.percentages
+													.percentage1.percentage
+									}></FilledPercentage>
 							</PercentageBar>
 						</PercentageBarContainer>
 						<PercentageBarContainer>
 							<PercentageTitle>
-								<Title>{"Cosmetic Treatment"}</Title>
-								<Percentage>{87}%</Percentage>
+								<Title>
+									{props.selectedLanguage === "AR"
+										? ARfeatures.feature2.percentages
+												.percentage2.title
+										: features.feature2.percentages
+												.percentage2.title}
+								</Title>
+								<Percentage>
+									{props.selectedLanguage === "AR"
+										? ARfeatures.feature2.percentages
+												.percentage2.percentage
+										: features.feature2.percentages
+												.percentage2.percentage}
+									%
+								</Percentage>
 							</PercentageTitle>
 							<PercentageBar>
 								<FilledPercentage
-									percentage={87}></FilledPercentage>
+									percentage={
+										props.selectedLanguage === "AR"
+											? ARfeatures.feature2.percentages
+													.percentage2.percentage
+											: features.feature2.percentages
+													.percentage2.percentage
+									}></FilledPercentage>
 							</PercentageBar>
 						</PercentageBarContainer>
 					</FeatureRightPercentage>
@@ -169,31 +289,72 @@ const Home = () => {
 							src="https://Moamen112.github.io/dental/imgs/feature2.svg"
 							alt="Feature 1"
 						/>
-						<FeatureService>
+						<FeatureService
+							selectedLanguage={props.selectedLanguage}>
 							<HeaderText className="feature-header">
-								Don't Hesitate to Do Consultation
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature2.services.header
+									: features.feature2.services.header}
 							</HeaderText>
 							<SmallText className="feature-text">
-								Lorem ipsum dolor sit amet, consectetuer
-								adipiscing elit. Aenean commodo ligula eget
-								dolor.
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature2.services.description
+									: features.feature2.services.description}
 							</SmallText>
 							<FeatureServiceList>
 								<FeatureServiceListItem>
-									<h5>Monday - Friday</h5>
-									<p>8AM - 10PM</p>
+									<h5>
+										{props.selectedLanguage === "AR"
+											? ARfeatures.feature2.services
+													.schedule.schedule1.day
+											: features.feature2.services
+													.schedule.schedule1.day}
+									</h5>
+									<p>
+										{props.selectedLanguage === "AR"
+											? ARfeatures.feature2.services
+													.schedule.schedule1.hours
+											: features.feature2.services
+													.schedule.schedule1.hours}
+									</p>
 								</FeatureServiceListItem>
 								<FeatureServiceListItem>
-									<h5>Monday - Friday</h5>
-									<p>8AM - 10PM</p>
+									<h5>
+										{props.selectedLanguage === "AR"
+											? ARfeatures.feature2.services
+													.schedule.schedule2.day
+											: features.feature2.services
+													.schedule.schedule2.day}
+									</h5>
+									<p>
+										{props.selectedLanguage === "AR"
+											? ARfeatures.feature2.services
+													.schedule.schedule2.hours
+											: features.feature2.services
+													.schedule.schedule2.hours}
+									</p>
 								</FeatureServiceListItem>
 								<FeatureServiceListItem>
-									<h5>Monday - Friday</h5>
-									<p>8AM - 10PM</p>
+									<h5>
+										{props.selectedLanguage === "AR"
+											? ARfeatures.feature2.services
+													.schedule.schedule3.day
+											: features.feature2.services
+													.schedule.schedule3.day}
+									</h5>
+									<p>
+										{props.selectedLanguage === "AR"
+											? ARfeatures.feature2.services
+													.schedule.schedule3.hours
+											: features.feature2.services
+													.schedule.schedule3.hours}
+									</p>
 								</FeatureServiceListItem>
 							</FeatureServiceList>
 							<FeatureServiceButton>
-								Call +01234 567 890
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature2.services.button
+									: features.feature2.services.button}
 							</FeatureServiceButton>
 						</FeatureService>
 					</FeatureServices>
@@ -203,26 +364,57 @@ const Home = () => {
 						<FeatureMember>
 							<div className="member-img1"></div>
 
-							<h3>Sara Ehab</h3>
-							<p className="member">cardiology & neurology</p>
+							<h3>
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature3.members.member1.name
+									: features.feature3.members.member1.name}
+							</h3>
+							<p className="member">
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature3.members.member1
+											.description
+									: features.feature3.members.member1
+											.description}
+							</p>
 						</FeatureMember>
 						<FeatureMember>
 							<div className="member-img2"></div>
-							<h3>Amr Ahmed</h3>
-							<p className="member">cardiology & neurology</p>
+							<h3>
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature3.members.member2.name
+									: features.feature3.members.member2.name}
+							</h3>
+							<p className="member">
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature3.members.member2
+											.description
+									: features.feature3.members.member2
+											.description}
+							</p>
 						</FeatureMember>
 						<FeatureMembersDescription>
 							<SmallText className="welcome">
-								Our Doctors
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature3.welcome
+									: features.feature3.welcome}
 							</SmallText>
-							<HeaderText>Our Experienced Doctors</HeaderText>
+							<HeaderText>
+								{" "}
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature3.headerText
+									: features.feature3.headerText}
+							</HeaderText>
 							<SmallText>
-								Lorem ipsum dolor sit amet, consectetuer
-								adipiscing elit. Aenean commodo ligula eget
-								dolor. Aenean massa. Cum sociis natoque
-								penatibus et magnis dis parturient.
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature3.description
+									: features.feature3.description}
 							</SmallText>
-							<Button>View more </Button>
+							<Button>
+								{" "}
+								{props.selectedLanguage === "AR"
+									? ARfeatures.feature3.button
+									: features.feature3.button}{" "}
+							</Button>
 						</FeatureMembersDescription>
 					</FeatureMembers>
 				</Feature>
@@ -236,9 +428,14 @@ const Home = () => {
 						/>
 						<CounterDesc>
 							<CounterNumber>
-								1200<span>+</span>
+								{counters.counter1.number}
+								<span>+</span>
 							</CounterNumber>
-							<CounterName>Happy Client</CounterName>
+							<CounterName>
+								{props.selectedLanguage === "AR"
+									? ARcounters.counter1.name
+									: counters.counter1.name}
+							</CounterName>
 						</CounterDesc>
 					</Counter>
 					<Counter>
@@ -250,9 +447,14 @@ const Home = () => {
 						/>
 						<CounterDesc>
 							<CounterNumber>
-								15<span>+</span>
+								{counters.counter2.number}
+								<span>+</span>
 							</CounterNumber>
-							<CounterName>Year Experience</CounterName>
+							<CounterName>
+								{props.selectedLanguage === "AR"
+									? ARcounters.counter2.name
+									: counters.counter2.name}
+							</CounterName>
 						</CounterDesc>
 					</Counter>
 					<Counter>
@@ -264,9 +466,14 @@ const Home = () => {
 						/>
 						<CounterDesc>
 							<CounterNumber>
-								70<span>+</span>
+								{counters.counter3.number}
+								<span>+</span>
 							</CounterNumber>
-							<CounterName>Doctor & Staff</CounterName>
+							<CounterName>
+								{props.selectedLanguage === "AR"
+									? ARcounters.counter3.name
+									: counters.counter3.name}
+							</CounterName>
 						</CounterDesc>
 					</Counter>
 					<Counter>
@@ -278,9 +485,14 @@ const Home = () => {
 						/>
 						<CounterDesc>
 							<CounterNumber>
-								340<span>+</span>
+								{counters.counter4.number}
+								<span>+</span>
 							</CounterNumber>
-							<CounterName>Online Appointment</CounterName>
+							<CounterName>
+								{props.selectedLanguage === "AR"
+									? ARcounters.counter4.name
+									: counters.counter4.name}
+							</CounterName>
 						</CounterDesc>
 					</Counter>
 				</Counters>
@@ -288,129 +500,228 @@ const Home = () => {
 			<OfferingSection>
 				{/* First Div (Centered Text) */}
 				<OfferingText>
-					<SmallText className="welcome">Our Services</SmallText>
-					<HeaderText>Services</HeaderText>
+					<SmallText className="welcome">
+						{props.selectedLanguage === "AR"
+							? ARofferings.text.welcome
+							: offerings.text.welcome}
+					</SmallText>
+					<HeaderText>
+						{props.selectedLanguage === "AR"
+							? ARofferings.text.header
+							: offerings.text.header}
+					</HeaderText>
 					<SmallText style={{ width: "80%" }}>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing
-						elit. Aenean commodo ligula aenean massa.
+						{props.selectedLanguage === "AR"
+							? ARofferings.text.description
+							: offerings.text.description}
 					</SmallText>
 				</OfferingText>
 
 				{/* Second Div (Grid of Boxes) */}
 				<OfferingBoxes>
 					{/* First Row */}
-					<OfferingBox>
+					<OfferingBox selectedLanguage={props.selectedLanguage}>
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer2.svg"
 							alt="Offering 2"
 						/>
-						<h3>Teeth Checkup</h3>
-						<OfferingDescription>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit
+						<h3>
+							{props.selectedLanguage === "AR"
+								? ARofferings.boxes.box1.title
+								: offerings.boxes.box1.title}
+						</h3>
+						<OfferingDescription
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? ARofferings.boxes.box1.description
+								: offerings.boxes.box1.description}
 						</OfferingDescription>
-						<OfferingLearn>
-							Learn More
+						<OfferingLearn
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? "اقرأ المزيد"
+								: "Learn More"}
 							<div className="forward">
-								<ArrowForwardIcon
-									sx={{ color: "#fff", fontSize: "12px" }}
-								/>
+								{props.selectedLanguage === "AR" ? (
+									<ArrowBackIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								) : (
+									<ArrowForwardIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								)}
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox>
+					<OfferingBox selectedLanguage={props.selectedLanguage}>
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer2.svg"
 							alt="Offering 2"
 						/>
-						<h3>Teeth Whitening</h3>
-						<OfferingDescription>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit
+						<h3>
+							{props.selectedLanguage === "AR"
+								? ARofferings.boxes.box2.title
+								: offerings.boxes.box2.title}
+						</h3>
+						<OfferingDescription
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? ARofferings.boxes.box2.description
+								: offerings.boxes.box2.description}
 						</OfferingDescription>
-						<OfferingLearn>
-							Learn More
+						<OfferingLearn
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? "اقرأ المزيد"
+								: "Learn More"}
 							<div className="forward">
-								<ArrowForwardIcon
-									sx={{ color: "#fff", fontSize: "12px" }}
-								/>
+								{props.selectedLanguage === "AR" ? (
+									<ArrowBackIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								) : (
+									<ArrowForwardIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								)}
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox>
+					<OfferingBox selectedLanguage={props.selectedLanguage}>
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer3.svg"
 							alt="Offering 2"
 						/>
-						<h3>Dental Checkup</h3>
-						<OfferingDescription>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit
+						<h3>
+							{props.selectedLanguage === "AR"
+								? ARofferings.boxes.box3.title
+								: offerings.boxes.box3.title}
+						</h3>
+						<OfferingDescription
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? ARofferings.boxes.box3.description
+								: offerings.boxes.box3.description}
 						</OfferingDescription>
-						<OfferingLearn>
-							Learn More
+						<OfferingLearn
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? "اقرأ المزيد"
+								: "Learn More"}
 							<div className="forward">
-								<ArrowForwardIcon
-									sx={{ color: "#fff", fontSize: "12px" }}
-								/>
+								{props.selectedLanguage === "AR" ? (
+									<ArrowBackIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								) : (
+									<ArrowForwardIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								)}
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
 					{/* Second Row */}
-					<OfferingBox>
+					<OfferingBox selectedLanguage={props.selectedLanguage}>
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer4.svg"
 							alt="Offering 2"
 						/>
-						<h3>Teeth Implants</h3>
-						<OfferingDescription>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit
+						<h3>
+							{props.selectedLanguage === "AR"
+								? ARofferings.boxes.box4.title
+								: offerings.boxes.box4.title}
+						</h3>
+						<OfferingDescription
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? ARofferings.boxes.box4.description
+								: offerings.boxes.box4.description}
 						</OfferingDescription>
-						<OfferingLearn>
-							Learn More
+						<OfferingLearn
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? "اقرأ المزيد"
+								: "Learn More"}
 							<div className="forward">
-								<ArrowForwardIcon
-									sx={{ color: "#fff", fontSize: "12px" }}
-								/>
+								{props.selectedLanguage === "AR" ? (
+									<ArrowBackIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								) : (
+									<ArrowForwardIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								)}
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox>
+					<OfferingBox selectedLanguage={props.selectedLanguage}>
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer5.svg"
 							alt="Offering 2"
 						/>
-						<h3>Dental Filling</h3>
-						<OfferingDescription>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit
+						<h3>
+							{props.selectedLanguage === "AR"
+								? ARofferings.boxes.box5.title
+								: offerings.boxes.box5.title}
+						</h3>
+						<OfferingDescription
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? ARofferings.boxes.box5.description
+								: offerings.boxes.box5.description}
 						</OfferingDescription>
-						<OfferingLearn>
-							Learn More
+						<OfferingLearn
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? "اقرأ المزيد"
+								: "Learn More"}
 							<div className="forward">
-								<ArrowForwardIcon
-									sx={{ color: "#fff", fontSize: "12px" }}
-								/>
+								{props.selectedLanguage === "AR" ? (
+									<ArrowBackIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								) : (
+									<ArrowForwardIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								)}
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox>
+					<OfferingBox selectedLanguage={props.selectedLanguage}>
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer6.svg"
 							alt="Offering 2"
 						/>
-						<h3>Cosmetic</h3>
-						<OfferingDescription>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit
+						<h3>
+							{props.selectedLanguage === "AR"
+								? ARofferings.boxes.box6.title
+								: offerings.boxes.box6.title}
+						</h3>
+						<OfferingDescription
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? ARofferings.boxes.box6.description
+								: offerings.boxes.box6.description}
 						</OfferingDescription>
-						<OfferingLearn>
-							Learn More
+						<OfferingLearn
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? "اقرأ المزيد"
+								: "Learn More"}
 							<div className="forward">
-								<ArrowForwardIcon
-									sx={{ color: "#fff", fontSize: "12px" }}
-								/>
+								{props.selectedLanguage === "AR" ? (
+									<ArrowBackIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								) : (
+									<ArrowForwardIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								)}
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
@@ -419,92 +730,128 @@ const Home = () => {
 			<ReviewsContainer>
 				{/* First Div (Centered Text) */}
 				<ReviewsText>
-					<SmallText className="welcome">Our Reviews</SmallText>
-					<HeaderText>What Our Patients Say</HeaderText>
+					<SmallText className="welcome">
+						{props.selectedLanguage === "AR"
+							? ARreviews.text.welcome
+							: reviews.text.welcome}
+					</SmallText>
+					<HeaderText>
+						{props.selectedLanguage === "AR"
+							? ARreviews.text.header
+							: reviews.text.header}
+					</HeaderText>
 					<SmallText style={{ width: "80%" }}>
-						Read what our satisfied patients have to say about us.
+						{props.selectedLanguage === "AR"
+							? ARreviews.text.description
+							: reviews.text.description}
 					</SmallText>
 				</ReviewsText>
 
 				{/* Second Div (Single Row of Review Boxes) */}
 				<ReviewsBoxes>
 					{/* Review Box 1 */}
-					<ReviewBox>
+					<ReviewBox selectedLanguage={props.selectedLanguage}>
 						<ReviewImage
 							src="https://Moamen112.github.io/dental/imgs/review1.svg"
 							alt="Review 1"
 						/>
-						<ReviewName>
-							<h3>Muhammed Kamal</h3>
+						<ReviewName selectedLanguage={props.selectedLanguage}>
+							<h3>
+								{props.selectedLanguage === "AR"
+									? ARreviews.boxes.box1.name
+									: reviews.boxes.box1.name}
+							</h3>
 							<img
 								src="https://Moamen112.github.io/dental/imgs/review.svg"
 								alt="icon"
 							/>
 						</ReviewName>
-						<ReviewDescription>
-							Lorem ipsum dolor sit amet,consectetur adipiscing
-							elit Lorem ipsum dolor sit amet, consectetur
-							adipiscing elit. Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit
+						<ReviewDescription
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? ARreviews.boxes.box1.description
+								: reviews.boxes.box1.description}
 						</ReviewDescription>
 					</ReviewBox>
 
 					{/* Review Box 2 */}
-					<ReviewBox>
+					<ReviewBox selectedLanguage={props.selectedLanguage}>
 						<ReviewImage
 							src="https://Moamen112.github.io/dental/imgs/review2.svg"
 							alt="Review 2"
 						/>
-						<ReviewName>
-							<h3>Muhammed Kamal</h3>
+						<ReviewName selectedLanguage={props.selectedLanguage}>
+							<h3>
+								{props.selectedLanguage === "AR"
+									? ARreviews.boxes.box2.name
+									: reviews.boxes.box2.name}
+							</h3>
 							<img
 								src="https://Moamen112.github.io/dental/imgs/review.svg"
 								alt="icon"
 							/>
 						</ReviewName>
-						<ReviewDescription>
-							Lorem ipsum dolor sit amet,consectetur adipiscing
-							elit Lorem ipsum dolor sit amet, consectetur
-							adipiscing elit. Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit
+						<ReviewDescription
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? ARreviews.boxes.box2.description
+								: reviews.boxes.box2.description}
 						</ReviewDescription>
 					</ReviewBox>
 
 					{/* Review Box 3 */}
-					<ReviewBox>
+					<ReviewBox selectedLanguage={props.selectedLanguage}>
 						<ReviewImage
 							src="https://Moamen112.github.io/dental/imgs/review3.svg"
 							alt="Review 3"
 						/>
-						<ReviewName>
-							<h3>Nada Abdelnasser</h3>
+						<ReviewName selectedLanguage={props.selectedLanguage}>
+							<h3>
+								{props.selectedLanguage === "AR"
+									? ARreviews.boxes.box3.name
+									: reviews.boxes.box3.name}
+							</h3>
 							<img
 								src="https://Moamen112.github.io/dental/imgs/review.svg"
 								alt="icon"
 							/>
 						</ReviewName>
-						<ReviewDescription>
-							Lorem ipsum dolor sit amet,consectetur adipiscing
-							elit Lorem ipsum dolor sit amet, consectetur
-							adipiscing elit. Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit
+						<ReviewDescription
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? ARreviews.boxes.box3.description
+								: reviews.boxes.box3.description}
 						</ReviewDescription>
 					</ReviewBox>
 				</ReviewsBoxes>
 			</ReviewsContainer>
-			<ContactContainer>
-				<ContactLeftSection>
-					<SmallText className="welcome">Contact Us</SmallText>
+			<ContactContainer selectedLanguage={props.selectedLanguage}>
+				<ContactLeftSection selectedLanguage={props.selectedLanguage}>
+					<SmallText className="welcome">
+						{props.selectedLanguage === "AR"
+							? ARcontact.left.welcome
+							: contact.left.welcome}
+					</SmallText>
 					<ContactText>
-						Your trusted partner for healthy and beautiful{" "}
-						<span>Smiles...</span>
+						{props.selectedLanguage === "AR"
+							? ARcontact.left.text
+							: contact.left.text}
+						<span>
+							{props.selectedLanguage === "AR"
+								? "وجميلة...."
+								: "Smiles..."}
+						</span>
 					</ContactText>
 					<SmallText>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing
-						elit. Aenean commodo ligula eget dolor. Aenean massa.
-						Cum sociis natoque penatibus et magnis dis parturient.
+						{props.selectedLanguage === "AR"
+							? ARcontact.left.description
+							: contact.left.description}
 					</SmallText>
-					<Button>Show More..</Button>
+					<Button>
+						{props.selectedLanguage === "AR"
+							? ARcontact.left.button
+							: contact.left.button}
+					</Button>
 				</ContactLeftSection>
 
 				{/* Right Section */}
@@ -523,6 +870,8 @@ const Home = () => {
 const HomeContainer = styled.div`
 	/* Add your container styles here */
 	padding-top: 80px;
+
+	direction: ${(props) => (props.selectedLanguage === "AR" ? "rtl" : "ltr")};
 
 	.welcome {
 		border: 1px solid rgba(0, 0, 0, 0.1);
@@ -557,7 +906,8 @@ const LeftSection = styled.div`
 	flex-direction: column;
 	align-items: flex-start;
 	margin: 60px auto;
-	padding: 0 0 0 8%;
+	padding: ${(props) =>
+		props.selectedLanguage === "AR" ? `0 8% 0 0` : `0 0 0 8%`};
 	justify-content: center;
 	width: 35%;
 	gap: 20px;
@@ -592,7 +942,7 @@ const RightSection = styled.div`
 const SmallText = styled.div`
 	font-size: 14px;
 	color: #333;
-	padding: 5px;
+	padding: 10px 5px;
 `;
 
 const HeaderText = styled.div`
@@ -757,7 +1107,7 @@ const FeatureService = styled.div`
 	justify-content: center;
 	flex-shrink: 0;
 	position: absolute;
-	right: 0px;
+	${(props) => (props.selectedLanguage === "AR" ? "left: 0;" : "right: 0;")}
 	width: 320.86px;
 	height: 400.56px;
 
@@ -1107,7 +1457,8 @@ const OfferingBox = styled.div`
 		width: 100%;
 		padding: 10px;
 		box-sizing: border-box;
-		text-align: left;
+		text-align: ${(props) =>
+			props.selectedLanguage === "AR" ? "right" : "left"};
 	}
 
 	@media (max-width: 768px) {
@@ -1127,13 +1478,14 @@ const OfferingDescription = styled.p`
 	color: #636571;
 	padding: 0px 10px;
 	width: 100%;
-	text-align: left;
+	text-align: ${(props) =>
+		props.selectedLanguage === "AR" ? "right" : "left"};
 `;
 
 const OfferingLearn = styled.div`
 	position: absolute;
 	bottom: 10px;
-	right: 10px;
+	${(props) => (props.selectedLanguage ? "left: 10px;" : " right: 10px;")}
 	color: #3d75c3;
 	text-align: center;
 	font-family: Manrope;
@@ -1199,7 +1551,8 @@ const ReviewBox = styled.div`
 		width: 100%;
 		padding: 10px;
 		box-sizing: border-box;
-		text-align: left;
+		text-align: ${(props) =>
+			props.selectedLanguage === "AR" ? "right" : "left"};
 	}
 
 	@media (max-width: 768px) {
@@ -1214,7 +1567,8 @@ const ReviewName = styled.div`
 	padding: 10px 0;
 
 	img {
-		padding: 0 20px 0 0;
+		padding: ${(props) =>
+			props.selectedLanguage === "AR" ? "0 0px 0 20px" : "0 20px 0 0"};
 	}
 `;
 
@@ -1230,14 +1584,11 @@ const ReviewDescription = styled.p`
 	color: #636571;
 	padding: 0px 10px;
 	width: 100%;
-	text-align: left;
+	line-height: ${(props) => (props.selectedLanguage === "AR" ? "30px" : "")};
+	text-align: ${(props) =>
+		props.selectedLanguage === "AR" ? "right" : "left"};
 `;
 
-const ReviewRating = styled.div`
-	font-size: 24px;
-	color: #3d75c3;
-	margin-top: auto;
-`;
 const ContactContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
@@ -1246,6 +1597,9 @@ const ContactContainer = styled.div`
 	height: 540px;
 	background-image: url("https://Moamen112.github.io/dental/imgs/contactbackground.svg");
 	background-size: cover;
+	${(props) =>
+		props.selectedLanguage === "AR" ? "transform: scaleX(-1);" : ""}
+
 	background-color: #f1f8ff;
 	@media (max-width: 768px) {
 		height: auto;
@@ -1255,16 +1609,20 @@ const ContactContainer = styled.div`
 
 const ContactLeftSection = styled.div`
 	display: flex;
+	transform: scaleX(-1);
 	flex-direction: column;
 	align-items: flex-start;
 	margin: 60px auto;
-	padding: 0 0 0 8%;
+	padding: ${(props) =>
+		props.selectedLanguage === "AR" ? "0 8% 0 0" : "0 0 0 8%"};
 	justify-content: center;
 	width: 35%;
 	gap: 20px;
+	${(props) => (props.selectedLanguage === "AR" ? "order: 1;" : "")}
 
 	@media (max-width: 1200px) {
-		padding: 0 0px 0 10%;
+		padding: ${(props) =>
+			(props.selectedLanguage = "AR" ? "0 10% 0 0" : "0 0px 0 10%")};
 	}
 
 	@media (max-width: 768px) {
@@ -1279,9 +1637,11 @@ const ContactLeftSection = styled.div`
 const ContactRightSection = styled.div`
 	/* Add styling for the right section, like width and padding */
 	width: 50%;
+	transform: scaleX(-1);
 	height: 100%;
 	display: flex;
 	justify-content: center;
+	${(props) => (props.selectedLanguage === "AR" ? "order: 0;" : "")}
 
 	@media (max-width: 768px) {
 		width: 100%;

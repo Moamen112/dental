@@ -3,13 +3,8 @@ import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink } from "react-router-dom";
 
-const NavBar = () => {
-	const [selectedLanguage, setSelectedLanguage] = useState("EN");
+const NavBar = (props) => {
 	const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
-
-	const handleLanguageChange = (language) => {
-		setSelectedLanguage(language);
-	};
 
 	const handleToggleMobileMenu = () => {
 		setMobileMenuVisible(!mobileMenuVisible);
@@ -57,13 +52,13 @@ const NavBar = () => {
 			{/* Language Buttons */}
 			<LanguageButtons>
 				<LanguageButton
-					selected={selectedLanguage === "EN"}
-					onClick={() => handleLanguageChange("EN")}>
+					selected={props.selectedLanguage === "EN"}
+					onClick={() => props.changeLanguage("EN")}>
 					EN
 				</LanguageButton>
 				<LanguageButton
-					selected={selectedLanguage === "AR"}
-					onClick={() => handleLanguageChange("AR")}>
+					selected={props.selectedLanguage === "AR"}
+					onClick={() => props.changeLanguage("AR")}>
 					AR
 				</LanguageButton>
 			</LanguageButtons>
@@ -97,13 +92,13 @@ const NavBar = () => {
 					{/* Language Buttons for Mobile */}
 					<LanguageButtonsMobile>
 						<LanguageButton
-							selected={selectedLanguage === "EN"}
-							onClick={() => handleLanguageChange("EN")}>
+							selected={props.selectedLanguage === "EN"}
+							onClick={() => props.changeLanguage("EN")}>
 							EN
 						</LanguageButton>
 						<LanguageButton
-							selected={selectedLanguage === "AR"}
-							onClick={() => handleLanguageChange("AR")}>
+							selected={props.selectedLanguage === "AR"}
+							onClick={() => props.changeLanguage("AR")}>
 							AR
 						</LanguageButton>
 					</LanguageButtonsMobile>
