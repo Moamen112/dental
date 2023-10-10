@@ -1,142 +1,245 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import servicesContent from "../content/servicesContent";
+import ArservicesContent from "../content/ArservicesContent";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-const Services = () => {
+const Services = (props) => {
+	const { header, offeringSection, counterSection, workingHours } =
+		props.selectedLanguage === "AR" ? ArservicesContent : servicesContent;
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+		AOS.init({
+			// Global settings:
+			disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+			startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+			initClassName: "aos-init", // class applied after initialization
+			animatedClassName: "aos-animate", // class applied on animation
+			useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+
+			// Settings that can be overridden per element via `data-aos-*` attributes:
+			offset: 120, // offset (in px) from the original trigger point
+			delay: 0, // values from 0 to 3000, with step 50ms
+			duration: 1000, // values from 0 to 3000, with step 50ms
+			easing: "ease", // default easing for AOS animations
+			once: false, // whether animation should happen only once - while scrolling down
+		});
+
+		if (props.selectedLanguage === "AR") {
+			AOS.refresh();
+		}
+	}, [props.selectedLanguage]);
 	return (
-		<ServicesContainer>
+		<ServicesContainer selectedLanguage={props.selectedLanguage}>
 			<Header>
 				<HeaderLayout>
-					<h2>Smiling Brighter Together</h2>
-					<h2>Your Trusted Dental Care Partner</h2>
+					<h2>{header.main}</h2>
+					<h2>{header.sub}</h2>
 				</HeaderLayout>
 			</Header>
 			<OfferingSection>
 				{/* First Div (Centered Text) */}
 				<OfferingText>
-					<SmallText className="welcome">Our Services</SmallText>
-					<HeaderText>Services</HeaderText>
+					<SmallText className="welcome">
+						{offeringSection.smallText}
+					</SmallText>
+					<HeaderText>{offeringSection.headerText}</HeaderText>
 					<SmallText style={{ width: "80%" }}>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing
-						elit. Aenean commodo ligula aenean massa.
+						{offeringSection.description}{" "}
 					</SmallText>
 				</OfferingText>
 
 				{/* Second Div (Grid of Boxes) */}
 				<OfferingBoxes>
 					{/* First Row */}
-					<OfferingBox>
+					<OfferingBox selectedLanguage={props.selectedLanguage}>
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer2.svg"
 							alt="Offering 2"
 						/>
-						<h3>Teeth Checkup</h3>
-						<OfferingDescription>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit
+						<h3>{offeringSection.offerings.offering1.title}</h3>
+						<OfferingDescription
+							selectedLanguage={props.selectedLanguage}>
+							{
+								offeringSection.offerings.offering1
+									.offeringDescription
+							}
 						</OfferingDescription>
-						<OfferingLearn>
-							Learn More
+						<OfferingLearn
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? "اقرأ المزيد"
+								: "Learn More"}
 							<div className="forward">
-								<ArrowForwardIcon
-									sx={{ color: "#fff", fontSize: "12px" }}
-								/>
+								{props.selectedLanguage === "AR" ? (
+									<ArrowBackIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								) : (
+									<ArrowForwardIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								)}
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox>
+					<OfferingBox selectedLanguage={props.selectedLanguage}>
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer2.svg"
 							alt="Offering 2"
 						/>
-						<h3>Teeth Whitening</h3>
-						<OfferingDescription>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit
+						<h3>{offeringSection.offerings.offering2.title}</h3>
+						<OfferingDescription
+							selectedLanguage={props.selectedLanguage}>
+							{
+								offeringSection.offerings.offering2
+									.offeringDescription
+							}
 						</OfferingDescription>
-						<OfferingLearn>
-							Learn More
+						<OfferingLearn
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? "اقرأ المزيد"
+								: "Learn More"}
 							<div className="forward">
-								<ArrowForwardIcon
-									sx={{ color: "#fff", fontSize: "12px" }}
-								/>
+								{props.selectedLanguage === "AR" ? (
+									<ArrowBackIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								) : (
+									<ArrowForwardIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								)}
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox>
+					<OfferingBox selectedLanguage={props.selectedLanguage}>
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer3.svg"
 							alt="Offering 2"
 						/>
-						<h3>Dental Checkup</h3>
-						<OfferingDescription>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit
+						<h3>{offeringSection.offerings.offering3.title}</h3>
+						<OfferingDescription
+							selectedLanguage={props.selectedLanguage}>
+							{
+								offeringSection.offerings.offering3
+									.offeringDescription
+							}
 						</OfferingDescription>
-						<OfferingLearn>
-							Learn More
+						<OfferingLearn
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? "اقرأ المزيد"
+								: "Learn More"}
 							<div className="forward">
-								<ArrowForwardIcon
-									sx={{ color: "#fff", fontSize: "12px" }}
-								/>
+								{props.selectedLanguage === "AR" ? (
+									<ArrowBackIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								) : (
+									<ArrowForwardIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								)}
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
 					{/* Second Row */}
-					<OfferingBox>
+					<OfferingBox selectedLanguage={props.selectedLanguage}>
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer4.svg"
 							alt="Offering 2"
 						/>
-						<h3>Teeth Implants</h3>
-						<OfferingDescription>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit
+						<h3>{offeringSection.offerings.offering4.title}</h3>
+						<OfferingDescription
+							selectedLanguage={props.selectedLanguage}>
+							{
+								offeringSection.offerings.offering4
+									.offeringDescription
+							}
 						</OfferingDescription>
-						<OfferingLearn>
-							Learn More
+						<OfferingLearn
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? "اقرأ المزيد"
+								: "Learn More"}
 							<div className="forward">
-								<ArrowForwardIcon
-									sx={{ color: "#fff", fontSize: "12px" }}
-								/>
+								{props.selectedLanguage === "AR" ? (
+									<ArrowBackIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								) : (
+									<ArrowForwardIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								)}
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox>
+					<OfferingBox selectedLanguage={props.selectedLanguage}>
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer5.svg"
 							alt="Offering 2"
 						/>
-						<h3>Dental Filling</h3>
-						<OfferingDescription>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit
+						<h3>{offeringSection.offerings.offering5.title}</h3>
+						<OfferingDescription
+							selectedLanguage={props.selectedLanguage}>
+							{
+								offeringSection.offerings.offering5
+									.offeringDescription
+							}
 						</OfferingDescription>
-						<OfferingLearn>
-							Learn More
+						<OfferingLearn
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? "اقرأ المزيد"
+								: "Learn More"}
 							<div className="forward">
-								<ArrowForwardIcon
-									sx={{ color: "#fff", fontSize: "12px" }}
-								/>
+								{props.selectedLanguage === "AR" ? (
+									<ArrowBackIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								) : (
+									<ArrowForwardIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								)}
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox>
+					<OfferingBox selectedLanguage={props.selectedLanguage}>
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer6.svg"
 							alt="Offering 2"
 						/>
-						<h3>Cosmetic</h3>
-						<OfferingDescription>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit
+						<h3>{offeringSection.offerings.offering6.title}</h3>
+						<OfferingDescription
+							selectedLanguage={props.selectedLanguage}>
+							{
+								offeringSection.offerings.offering6
+									.offeringDescription
+							}
 						</OfferingDescription>
-						<OfferingLearn>
-							Learn More
+						<OfferingLearn
+							selectedLanguage={props.selectedLanguage}>
+							{props.selectedLanguage === "AR"
+								? "اقرأ المزيد"
+								: "Learn More"}
 							<div className="forward">
-								<ArrowForwardIcon
-									sx={{ color: "#fff", fontSize: "12px" }}
-								/>
+								{props.selectedLanguage === "AR" ? (
+									<ArrowBackIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								) : (
+									<ArrowForwardIcon
+										sx={{ color: "#fff", fontSize: "12px" }}
+									/>
+								)}
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
@@ -151,9 +254,12 @@ const Services = () => {
 						/>
 						<CounterDesc>
 							<CounterNumber>
-								1200<span>+</span>
+								{counterSection.counters.counter1.number}
+								<span>+</span>
 							</CounterNumber>
-							<CounterName>Happy Client</CounterName>
+							<CounterName>
+								{counterSection.counters.counter1.name}
+							</CounterName>
 						</CounterDesc>
 					</Counter>
 					<Counter>
@@ -165,9 +271,13 @@ const Services = () => {
 						/>
 						<CounterDesc>
 							<CounterNumber>
-								15<span>+</span>
+								{counterSection.counters.counter2.number}
+								<span>+</span>
 							</CounterNumber>
-							<CounterName>Year Experience</CounterName>
+							<CounterName>
+								{" "}
+								{counterSection.counters.counter2.name}
+							</CounterName>
 						</CounterDesc>
 					</Counter>
 					<Counter>
@@ -179,9 +289,12 @@ const Services = () => {
 						/>
 						<CounterDesc>
 							<CounterNumber>
-								70<span>+</span>
+								{counterSection.counters.counter3.number}
+								<span>+</span>
 							</CounterNumber>
-							<CounterName>Doctor & Staff</CounterName>
+							<CounterName>
+								{counterSection.counters.counter3.name}
+							</CounterName>
 						</CounterDesc>
 					</Counter>
 					<Counter>
@@ -193,9 +306,12 @@ const Services = () => {
 						/>
 						<CounterDesc>
 							<CounterNumber>
-								340<span>+</span>
+								{counterSection.counters.counter4.number}
+								<span>+</span>
 							</CounterNumber>
-							<CounterName>Online Appointment</CounterName>
+							<CounterName>
+								{counterSection.counters.counter4.name}
+							</CounterName>
 						</CounterDesc>
 					</Counter>
 				</Counters>
@@ -203,11 +319,11 @@ const Services = () => {
 
 			<WorkingHours>
 				<WorkingLayout>
-					<SmallText className="welcome">Our Story</SmallText>
-					<h2>Working Hours</h2>
-					<SmallText>
-						Monday To Saturday: 9.00 am - 11.30 pm Sunday Closed
+					<SmallText className="welcome">
+						{workingHours.smallText}
 					</SmallText>
+					<h2>{workingHours.header}</h2>
+					<SmallText>{workingHours.description}</SmallText>
 				</WorkingLayout>
 			</WorkingHours>
 		</ServicesContainer>
@@ -216,6 +332,7 @@ const Services = () => {
 
 const ServicesContainer = styled.section`
 	padding-top: 80px;
+	direction: ${(props) => (props.selectedLanguage === "AR" ? "rtl" : "ltr")};
 
 	.welcome {
 		border: 1px solid rgba(0, 0, 0, 0.1);
@@ -364,7 +481,8 @@ const OfferingBox = styled.div`
 		width: 100%;
 		padding: 10px;
 		box-sizing: border-box;
-		text-align: left;
+		text-align: ${(props) =>
+			props.selectedLanguage === "AR" ? "right" : "left"};
 	}
 
 	@media (max-width: 768px) {
@@ -384,13 +502,14 @@ const OfferingDescription = styled.p`
 	color: #636571;
 	padding: 0px 10px;
 	width: 100%;
-	text-align: left;
+	text-align: ${(props) =>
+		props.selectedLanguage === "AR" ? "right" : "left"};
 `;
 
 const OfferingLearn = styled.div`
 	position: absolute;
 	bottom: 10px;
-	right: 10px;
+	${(props) => (props.selectedLanguage ? "left: 10px;" : " right: 10px;")}
 	color: #3d75c3;
 	text-align: center;
 	font-family: Manrope;
@@ -400,6 +519,7 @@ const OfferingLearn = styled.div`
 	line-height: 24px; /* 160% */
 	display: flex;
 	gap: 5px;
+	order: 1;
 
 	.forward {
 		background-color: #3d75c3;
@@ -408,6 +528,7 @@ const OfferingLearn = styled.div`
 		border-radius: 50%;
 		display: flex;
 		align-items: center;
+		order: 0;
 	}
 `;
 

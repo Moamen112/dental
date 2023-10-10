@@ -32,15 +32,21 @@ function App() {
 					/>
 					<Route
 						path="/about"
-						element={<AboutUs />}
+						element={
+							<AboutUs selectedLanguage={selectedLanguage} />
+						}
 					/>
 					<Route
 						path="/services"
-						element={<Services />}
+						element={
+							<Services selectedLanguage={selectedLanguage} />
+						}
 					/>
 					<Route
 						path="/contact"
-						element={<Contact />}
+						element={
+							<Contact selectedLanguage={selectedLanguage} />
+						}
 					/>
 				</Routes>
 				<Footer />

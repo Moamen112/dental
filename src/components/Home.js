@@ -1,12 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import contentObject from "../content/contentObject";
 import translatedContent from "../content/translatedContent ";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 
 const Home = (props) => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+		AOS.init({
+			// Global settings:
+			disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+			startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+			initClassName: "aos-init", // class applied after initialization
+			animatedClassName: "aos-animate", // class applied on animation
+			useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+
+			// Settings that can be overridden per element via `data-aos-*` attributes:
+			offset: 120, // offset (in px) from the original trigger point
+			delay: 0, // values from 0 to 3000, with step 50ms
+			duration: 1000, // values from 0 to 3000, with step 50ms
+			easing: "ease", // default easing for AOS animations
+			once: false, // whether animation should happen only once - while scrolling down
+		});
+
+		if (props.selectedLanguage === "AR") {
+			AOS.refresh();
+		}
+	}, [props.selectedLanguage]);
 	const {
 		header,
 		services,
@@ -31,7 +55,9 @@ const Home = (props) => {
 		<HomeContainer selectedLanguage={props.selectedLanguage}>
 			<Header>
 				{/* Left Section */}
-				<LeftSection selectedLanguage={props.selectedLanguage}>
+				<LeftSection
+					selectedLanguage={props.selectedLanguage}
+					data-aos="fade-right">
 					<SmallText className="welcome">
 						{props.selectedLanguage === "AR"
 							? ARheader.welcome
@@ -60,7 +86,7 @@ const Home = (props) => {
 				</LeftSection>
 
 				{/* Right Section */}
-				<RightSection>
+				<RightSection data-aos="fade-left">
 					<HeaderImage
 						src={
 							"https://Moamen112.github.io/dental/imgs/header.svg"
@@ -70,7 +96,7 @@ const Home = (props) => {
 				</RightSection>
 			</Header>
 			<Services>
-				<Service>
+				<Service data-aos="fade-up">
 					<ServiceIcon>
 						{/* Add your icon for the first service */}
 						<img
@@ -89,7 +115,9 @@ const Home = (props) => {
 							: services.service1.description}
 					</ServiceDescription>
 				</Service>
-				<Service>
+				<Service
+					data-aos="fade-up"
+					data-aos-delay="100">
 					<ServiceIcon>
 						{/* Add your icon for the second service */}
 						<img
@@ -108,7 +136,9 @@ const Home = (props) => {
 							: services.service2.description}
 					</ServiceDescription>
 				</Service>
-				<Service>
+				<Service
+					data-aos="fade-up"
+					data-aos-delay="200">
 					<ServiceIcon>
 						{/* Add your icon for the third service */}
 						<img
@@ -130,13 +160,15 @@ const Home = (props) => {
 			</Services>
 			<Features>
 				<Feature>
-					<FeatureLeft className="hidden">
+					<FeatureLeft
+						className="hidden"
+						data-aos="fade-up">
 						<FeatureImage
 							src="https://Moamen112.github.io/dental/imgs/feature1.svg"
 							alt="Feature 1"
 						/>
 					</FeatureLeft>
-					<FeatureRight>
+					<FeatureRight data-aos="fade-up">
 						<SmallText className="welcome responsiveText">
 							{props.selectedLanguage === "AR"
 								? ARfeatures.feature1.welcome
@@ -208,7 +240,7 @@ const Home = (props) => {
 					</FeatureRight>
 				</Feature>
 				<Feature>
-					<FeatureRightPercentage>
+					<FeatureRightPercentage data-aos="fade-up">
 						<SmallText className="welcome">
 							{props.selectedLanguage === "AR"
 								? ARfeatures.feature2.welcome
@@ -284,12 +316,20 @@ const Home = (props) => {
 							</PercentageBar>
 						</PercentageBarContainer>
 					</FeatureRightPercentage>
-					<FeatureServices>
+					<FeatureServices
+						data-aos="fade-up"
+						data-aos-delay="100">
 						<FeatureImageService
 							src="https://Moamen112.github.io/dental/imgs/feature2.svg"
 							alt="Feature 1"
 						/>
 						<FeatureService
+							data-aos={
+								props.selectedLanguage === "AR"
+									? "fade-right"
+									: "fade-left"
+							}
+							data-aos-delay="350"
 							selectedLanguage={props.selectedLanguage}>
 							<HeaderText className="feature-header">
 								{props.selectedLanguage === "AR"
@@ -361,7 +401,9 @@ const Home = (props) => {
 				</Feature>
 				<Feature>
 					<FeatureMembers>
-						<FeatureMember>
+						<FeatureMember
+							data-aos="fade-up"
+							data-aos-delay="100">
 							<div className="member-img1"></div>
 
 							<h3>
@@ -377,7 +419,9 @@ const Home = (props) => {
 											.description}
 							</p>
 						</FeatureMember>
-						<FeatureMember>
+						<FeatureMember
+							data-aos="fade-up"
+							data-aos-delay="150">
 							<div className="member-img2"></div>
 							<h3>
 								{props.selectedLanguage === "AR"
@@ -392,7 +436,9 @@ const Home = (props) => {
 											.description}
 							</p>
 						</FeatureMember>
-						<FeatureMembersDescription>
+						<FeatureMembersDescription
+							data-aos="fade-up"
+							data-aos-delay="200">
 							<SmallText className="welcome">
 								{props.selectedLanguage === "AR"
 									? ARfeatures.feature3.welcome
@@ -421,7 +467,9 @@ const Home = (props) => {
 			</Features>
 			<CounterSectionContainer>
 				<Counters>
-					<Counter>
+					<Counter
+						data-aos="fade-up"
+						data-aos-delay="0">
 						<CounterImage
 							src="https://Moamen112.github.io/dental/imgs/Tooth-white.svg"
 							alt="Counter 1"
@@ -438,7 +486,9 @@ const Home = (props) => {
 							</CounterName>
 						</CounterDesc>
 					</Counter>
-					<Counter>
+					<Counter
+						data-aos="fade-up"
+						data-aos-delay="50">
 						<CounterImage
 							src={
 								"https://Moamen112.github.io/dental/imgs/clinic-1.svg"
@@ -457,7 +507,9 @@ const Home = (props) => {
 							</CounterName>
 						</CounterDesc>
 					</Counter>
-					<Counter>
+					<Counter
+						data-aos="fade-up"
+						data-aos-delay="100">
 						<CounterImage
 							src={
 								"https://Moamen112.github.io/dental/imgs/dentist-white.svg"
@@ -476,7 +528,9 @@ const Home = (props) => {
 							</CounterName>
 						</CounterDesc>
 					</Counter>
-					<Counter>
+					<Counter
+						data-aos="fade-up"
+						data-aos-delay="150">
 						<CounterImage
 							src={
 								"https://Moamen112.github.io/dental/imgs/scedule-white.svg"
@@ -499,7 +553,9 @@ const Home = (props) => {
 			</CounterSectionContainer>
 			<OfferingSection>
 				{/* First Div (Centered Text) */}
-				<OfferingText>
+				<OfferingText
+					data-aos="fade-up"
+					data-aos-delay="100">
 					<SmallText className="welcome">
 						{props.selectedLanguage === "AR"
 							? ARofferings.text.welcome
@@ -520,7 +576,10 @@ const Home = (props) => {
 				{/* Second Div (Grid of Boxes) */}
 				<OfferingBoxes>
 					{/* First Row */}
-					<OfferingBox selectedLanguage={props.selectedLanguage}>
+					<OfferingBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="100">
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer2.svg"
 							alt="Offering 2"
@@ -554,7 +613,10 @@ const Home = (props) => {
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox selectedLanguage={props.selectedLanguage}>
+					<OfferingBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="300">
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer2.svg"
 							alt="Offering 2"
@@ -588,7 +650,10 @@ const Home = (props) => {
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox selectedLanguage={props.selectedLanguage}>
+					<OfferingBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="500">
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer3.svg"
 							alt="Offering 2"
@@ -623,7 +688,10 @@ const Home = (props) => {
 						</OfferingLearn>
 					</OfferingBox>
 					{/* Second Row */}
-					<OfferingBox selectedLanguage={props.selectedLanguage}>
+					<OfferingBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="100">
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer4.svg"
 							alt="Offering 2"
@@ -657,7 +725,10 @@ const Home = (props) => {
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox selectedLanguage={props.selectedLanguage}>
+					<OfferingBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="300">
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer5.svg"
 							alt="Offering 2"
@@ -691,7 +762,10 @@ const Home = (props) => {
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox selectedLanguage={props.selectedLanguage}>
+					<OfferingBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="500">
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer6.svg"
 							alt="Offering 2"
@@ -729,7 +803,9 @@ const Home = (props) => {
 			</OfferingSection>
 			<ReviewsContainer>
 				{/* First Div (Centered Text) */}
-				<ReviewsText>
+				<ReviewsText
+					data-aos="fade-up"
+					data-aos-delay="100">
 					<SmallText className="welcome">
 						{props.selectedLanguage === "AR"
 							? ARreviews.text.welcome
@@ -750,7 +826,10 @@ const Home = (props) => {
 				{/* Second Div (Single Row of Review Boxes) */}
 				<ReviewsBoxes>
 					{/* Review Box 1 */}
-					<ReviewBox selectedLanguage={props.selectedLanguage}>
+					<ReviewBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="100">
 						<ReviewImage
 							src="https://Moamen112.github.io/dental/imgs/review1.svg"
 							alt="Review 1"
@@ -775,7 +854,10 @@ const Home = (props) => {
 					</ReviewBox>
 
 					{/* Review Box 2 */}
-					<ReviewBox selectedLanguage={props.selectedLanguage}>
+					<ReviewBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="300">
 						<ReviewImage
 							src="https://Moamen112.github.io/dental/imgs/review2.svg"
 							alt="Review 2"
@@ -800,7 +882,10 @@ const Home = (props) => {
 					</ReviewBox>
 
 					{/* Review Box 3 */}
-					<ReviewBox selectedLanguage={props.selectedLanguage}>
+					<ReviewBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="500">
 						<ReviewImage
 							src="https://Moamen112.github.io/dental/imgs/review3.svg"
 							alt="Review 3"
@@ -855,7 +940,10 @@ const Home = (props) => {
 				</ContactLeftSection>
 
 				{/* Right Section */}
-				<ContactRightSection className="hidden">
+				<ContactRightSection
+					className="hidden"
+					data-aos="fade-left"
+					data-aos-delay="100">
 					<ContactImage
 						src="https://Moamen112.github.io/dental/imgs/contact.svg"
 						alt="Header Image"

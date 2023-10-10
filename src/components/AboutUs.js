@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
+import aboutUsContent from "../content/aboutUsContent";
+import ArAboutUsContent from "../content/ArAboutUsContent";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const AboutUs = () => {
+const AboutUs = (props) => {
 	const [isPlaying, setIsPlaying] = useState(false);
+
+	const { header, videoSection, leaders, ourStory, values, valueIcons } =
+		props.selectedLanguage === "AR" ? ArAboutUsContent : aboutUsContent;
 
 	const toggleVideo = () => {
 		const video = document.getElementById("aboutVideo");
@@ -16,26 +23,42 @@ const AboutUs = () => {
 		}
 	};
 
+	useEffect(() => {
+		window.scrollTo(0, 0);
+		AOS.init({
+			// Global settings:
+			disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+			startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+			initClassName: "aos-init", // class applied after initialization
+			animatedClassName: "aos-animate", // class applied on animation
+			useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+
+			// Settings that can be overridden per element via `data-aos-*` attributes:
+			offset: 120, // offset (in px) from the original trigger point
+			delay: 0, // values from 0 to 3000, with step 50ms
+			duration: 1000, // values from 0 to 3000, with step 50ms
+			easing: "ease", // default easing for AOS animations
+			once: false, // whether animation should happen only once - while scrolling down
+		});
+
+		if (props.selectedLanguage === "AR") {
+			AOS.refresh();
+		}
+	}, [props.selectedLanguage]);
+
 	return (
 		<AboutContainer>
 			<Header>
 				<HeaderLayout>
-					<h2>Smiling Brighter Together</h2>
-					<h2>Your Trusted Dental Care Partner</h2>
+					<h2>{header.main}</h2>
+					<h2>{header.sub}</h2>
 				</HeaderLayout>
 			</Header>
 			<AboutVideoSection>
 				<VideoSectionHeader>
-					<HeaderText>
-						Our team helps you get your life back on track.
-					</HeaderText>
+					<HeaderText>{videoSection.headerText}</HeaderText>
 					<SmallText style={{ width: "100%" }}>
-						Our team of highly trained professionals uses the latest
-						healing technologies to restore you to pain-free health
-						quickly and easily. We thoroughly evaluate & treat all
-						of the contributing root factors related to your issue.
-						Includes, but is not limited to, your work and home
-						stressors.
+						{videoSection.smallText}
 					</SmallText>
 				</VideoSectionHeader>
 				<VideoSection>
@@ -63,22 +86,16 @@ const AboutUs = () => {
 						<VideoDescriptionList>
 							<VideoDescriptionListItems>
 								<SmallText className="welcome">
-									The Leaders
+									{leaders.header}
 								</SmallText>
 								<VideoHeaderText>
-									We have the best Pharma & Medical
+									{leaders.headerText}
 								</VideoHeaderText>
 								<SmallText className="vid">
-									Collaboratively administrate empowered
-									markets via plug-and-play networks. users
-									after installed base benefits. Dramatically
-									visualize customer.
+									{leaders.description1}
 								</SmallText>
 								<SmallText className="vid">
-									Collaboratively administrate empowered
-									markets via plug-and-play networks. users
-									after installed base benefits. Dramatically
-									visualize customer.
+									{leaders.description2}
 								</SmallText>
 							</VideoDescriptionListItems>
 							<VideoDescriptionListItems></VideoDescriptionListItems>
@@ -87,25 +104,18 @@ const AboutUs = () => {
 						<VideoDescriptionList>
 							<VideoDescriptionListItems>
 								<SmallText className="welcome">
-									Our Story
+									{ourStory.header}
 								</SmallText>
 								<VideoHeaderText>
-									Our mission is to help patients live better.
+									{ourStory.headerText}
 								</VideoHeaderText>
 								<SmallText className="vid">
-									Collaboratively administrate empowered
-									markets via plug-and-play networks. users
-									after installed base benefits. Dramatically
-									visualize customer.
+									{ourStory.description}
 								</SmallText>
 								<ul className="desc">
-									<li>
-										Over 400 leading hospitals and clinics
-									</li>
-									<li>
-										Trusted doctors across 20+ specialties
-									</li>
-									<li>Award-winning practice management</li>
+									<li>{ourStory.lists.list1}</li>
+									<li>{ourStory.lists.list2}</li>
+									<li>{ourStory.lists.list3}</li>
 								</ul>
 							</VideoDescriptionListItems>
 						</VideoDescriptionList>
@@ -114,14 +124,9 @@ const AboutUs = () => {
 			</AboutVideoSection>
 			<AboutValues>
 				<VideoSectionHeader>
-					<HeaderText>Our values that drive success</HeaderText>
+					<HeaderText>{values.header}</HeaderText>
 					<SmallText style={{ width: "100%" }}>
-						Our team of highly trained professionals uses the latest
-						healing technologies to restore you to pain-free health
-						quickly and easily. We thoroughly evaluate & treat all
-						of the contributing root factors related to your issue.
-						Includes, but is not limit, your work and home
-						stressors. stressors.
+						{values.description}
 					</SmallText>
 				</VideoSectionHeader>
 				<AboutValue>
@@ -147,11 +152,10 @@ const AboutUs = () => {
 									/>
 								</svg>
 								<AboutHeaderText>
-									Bio Technology
+									{valueIcons.value1.icon}
 								</AboutHeaderText>
 								<SmallText>
-									Our team of highly trained professionals
-									uses the latest healing technologies.
+									{valueIcons.value1.description}
 								</SmallText>
 							</ValueIcon>
 						</AboutValueListItems>
@@ -175,10 +179,11 @@ const AboutUs = () => {
 										fill="#3D75C3"
 									/>
 								</svg>
-								<AboutHeaderText>Vaccine</AboutHeaderText>
+								<AboutHeaderText>
+									{valueIcons.value2.icon}
+								</AboutHeaderText>
 								<SmallText>
-									Our team of highly trained professionals
-									uses the latest healing technologies.
+									{valueIcons.value2.description}
 								</SmallText>
 							</ValueIcon>
 						</AboutValueListItems>
@@ -203,11 +208,10 @@ const AboutUs = () => {
 									/>
 								</svg>
 								<AboutHeaderText>
-									Latest Technology
+									{valueIcons.value3.icon}
 								</AboutHeaderText>
 								<SmallText>
-									Our team of highly trained professionals
-									uses the latest healing technologies.
+									{valueIcons.value3.description}
 								</SmallText>
 							</ValueIcon>
 						</AboutValueListItems>
@@ -233,11 +237,10 @@ const AboutUs = () => {
 									/>
 								</svg>
 								<AboutHeaderText>
-									Expert Doctors
+									{valueIcons.value4.icon}
 								</AboutHeaderText>
 								<SmallText>
-									Our team of highly trained professionals
-									uses the latest healing technologies.
+									{valueIcons.value4.description}
 								</SmallText>
 							</ValueIcon>
 						</AboutValueListItems>
