@@ -1,21 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import footerContent from "../content/footerContent";
+import ARfooterContent from "../content/ARfooterContent";
 
-const Footer = () => {
+const Footer = (props) => {
+	const { about, helpfulLinks, support, contactUs, copyright } =
+		props.selectedLanguage === "AR" ? ARfooterContent : footerContent;
+
 	return (
 		<FooterContainer>
 			<FooterBody>
-				<FooterLogoList>
+				<FooterLogoList
+					data-aos="fade-up"
+					data-aos-delay="50">
 					<FooterLogoListItems>
 						<img
 							src="https://Moamen112.github.io/dental/imgs/footerlogo.svg"
 							alt="logo"
 						/>
 					</FooterLogoListItems>
-					<FooterLogoListItems>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					</FooterLogoListItems>
+					<FooterLogoListItems>{about.text}</FooterLogoListItems>
 					<FooterLogoListItems>
 						<SocialIcons>
 							<img
@@ -37,22 +41,39 @@ const Footer = () => {
 						</SocialIcons>
 					</FooterLogoListItems>
 				</FooterLogoList>
-				<FooterList>
-					<h3>Helpfull Link</h3>
-					<FooterListItems>Privacy Policy</FooterListItems>
-					<FooterListItems>Support</FooterListItems>
-					<FooterListItems>FAQ</FooterListItems>
-					<FooterListItems>Terms & Conditions</FooterListItems>
+				<FooterList
+					data-aos="fade-up"
+					data-aos-delay="150">
+					<h3>{helpfulLinks.title}</h3>
+					<FooterListItems>
+						{helpfulLinks.links.privacyPolicy}
+					</FooterListItems>
+					<FooterListItems>
+						{helpfulLinks.links.support}
+					</FooterListItems>
+					<FooterListItems>{helpfulLinks.links.faq}</FooterListItems>
+					<FooterListItems>
+						{helpfulLinks.links.termsAndConditions}
+					</FooterListItems>
 				</FooterList>
-				<FooterList>
-					<h3>Support</h3>
-					<FooterListItems>Privacy Policy</FooterListItems>
-					<FooterListItems>Support</FooterListItems>
-					<FooterListItems>FAQ</FooterListItems>
-					<FooterListItems>Terms & Conditions</FooterListItems>
+				<FooterList
+					data-aos="fade-up"
+					data-aos-delay="250">
+					<h3>{support.title}</h3>
+					<FooterListItems>
+						{support.links.privacyPolicy}
+					</FooterListItems>
+					<FooterListItems> {support.links.support}</FooterListItems>
+					<FooterListItems> {support.links.faq}</FooterListItems>
+					<FooterListItems>
+						{" "}
+						{support.links.termsAndConditions}
+					</FooterListItems>
 				</FooterList>
-				<FooterList>
-					<h3>Contact Us</h3>
+				<FooterList
+					data-aos="fade-up"
+					data-aos-delay="350">
+					<h3> {contactUs.title}</h3>
 					<FooterListItems>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +94,7 @@ const Footer = () => {
 								fill="white"
 							/>
 						</svg>
-						nadaabdelnasser487@gmail.com
+						{contactUs.email}
 					</FooterListItems>
 					<FooterListItems>
 						<svg
@@ -87,18 +108,21 @@ const Footer = () => {
 								fill="white"
 							/>
 						</svg>
-						50 Gamal Abd El-Nasir Rd, Al Mandarah Bahri
+						{contactUs.address}
 					</FooterListItems>
 					<FooterListItems>
-						<div>略</div>+01234 567 890
+						<div>略</div>
+						{contactUs.phone}
 					</FooterListItems>
 					<FooterListItems></FooterListItems>
 					<FooterListItems></FooterListItems>
 					<FooterListItems></FooterListItems>
 				</FooterList>
 			</FooterBody>
-			<FooterCopyRight>
-				<p>Copyright © 2023. All rights reserved adsadasd</p>
+			<FooterCopyRight
+				data-aos="fade-right"
+				data-aos-delay="450">
+				<p>{copyright.text}</p>
 			</FooterCopyRight>
 		</FooterContainer>
 	);

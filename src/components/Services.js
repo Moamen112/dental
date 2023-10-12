@@ -37,18 +37,32 @@ const Services = (props) => {
 		<ServicesContainer selectedLanguage={props.selectedLanguage}>
 			<Header>
 				<HeaderLayout>
-					<h2>{header.main}</h2>
-					<h2>{header.sub}</h2>
+					<h2 data-aos="fade-up">{header.main}</h2>
+					<h2
+						data-aos="fade-up"
+						data-aos-delay="250">
+						{header.sub}
+					</h2>
 				</HeaderLayout>
 			</Header>
 			<OfferingSection>
 				{/* First Div (Centered Text) */}
 				<OfferingText>
-					<SmallText className="welcome">
+					<SmallText
+						className="welcome"
+						data-aos="fade-up"
+						data-aos-delay="50">
 						{offeringSection.smallText}
 					</SmallText>
-					<HeaderText>{offeringSection.headerText}</HeaderText>
-					<SmallText style={{ width: "80%" }}>
+					<HeaderText
+						data-aos="fade-up"
+						data-aos-delay="150">
+						{offeringSection.headerText}
+					</HeaderText>
+					<SmallText
+						style={{ width: "80%" }}
+						data-aos="fade-up"
+						data-aos-delay="250">
 						{offeringSection.description}{" "}
 					</SmallText>
 				</OfferingText>
@@ -56,7 +70,10 @@ const Services = (props) => {
 				{/* Second Div (Grid of Boxes) */}
 				<OfferingBoxes>
 					{/* First Row */}
-					<OfferingBox selectedLanguage={props.selectedLanguage}>
+					<OfferingBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="50">
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer2.svg"
 							alt="Offering 2"
@@ -87,7 +104,10 @@ const Services = (props) => {
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox selectedLanguage={props.selectedLanguage}>
+					<OfferingBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="150">
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer2.svg"
 							alt="Offering 2"
@@ -118,7 +138,10 @@ const Services = (props) => {
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox selectedLanguage={props.selectedLanguage}>
+					<OfferingBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="250">
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer3.svg"
 							alt="Offering 2"
@@ -150,7 +173,10 @@ const Services = (props) => {
 						</OfferingLearn>
 					</OfferingBox>
 					{/* Second Row */}
-					<OfferingBox selectedLanguage={props.selectedLanguage}>
+					<OfferingBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="50">
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer4.svg"
 							alt="Offering 2"
@@ -181,7 +207,10 @@ const Services = (props) => {
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox selectedLanguage={props.selectedLanguage}>
+					<OfferingBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="150">
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer5.svg"
 							alt="Offering 2"
@@ -212,7 +241,10 @@ const Services = (props) => {
 							</div>
 						</OfferingLearn>
 					</OfferingBox>
-					<OfferingBox selectedLanguage={props.selectedLanguage}>
+					<OfferingBox
+						selectedLanguage={props.selectedLanguage}
+						data-aos="fade-up"
+						data-aos-delay="250">
 						<OfferingImage
 							src="https://Moamen112.github.io/dental/imgs/offer6.svg"
 							alt="Offering 2"
@@ -247,7 +279,9 @@ const Services = (props) => {
 			</OfferingSection>
 			<CounterSectionContainer>
 				<Counters>
-					<Counter>
+					<Counter
+						data-aos="fade-up"
+						data-aos-delay="50">
 						<CounterImage
 							src="https://Moamen112.github.io/dental/imgs/Tooth-white.svg"
 							alt="Counter 1"
@@ -262,7 +296,9 @@ const Services = (props) => {
 							</CounterName>
 						</CounterDesc>
 					</Counter>
-					<Counter>
+					<Counter
+						data-aos="fade-up"
+						data-aos-delay="100">
 						<CounterImage
 							src={
 								"https://Moamen112.github.io/dental/imgs/clinic-1.svg"
@@ -280,7 +316,9 @@ const Services = (props) => {
 							</CounterName>
 						</CounterDesc>
 					</Counter>
-					<Counter>
+					<Counter
+						data-aos="fade-up"
+						data-aos-delay="150">
 						<CounterImage
 							src={
 								"https://Moamen112.github.io/dental/imgs/dentist-white.svg"
@@ -297,7 +335,9 @@ const Services = (props) => {
 							</CounterName>
 						</CounterDesc>
 					</Counter>
-					<Counter>
+					<Counter
+						data-aos="fade-up"
+						data-aos-delay="200">
 						<CounterImage
 							src={
 								"https://Moamen112.github.io/dental/imgs/scedule-white.svg"
@@ -318,12 +358,25 @@ const Services = (props) => {
 			</CounterSectionContainer>
 
 			<WorkingHours>
-				<WorkingLayout>
-					<SmallText className="welcome">
+				<WorkingLayout
+					data-aos="fade-up"
+					data-aos-delay="100">
+					<SmallText
+						className="welcome"
+						data-aos="fade-up"
+						data-aos-delay="250">
 						{workingHours.smallText}
 					</SmallText>
-					<h2>{workingHours.header}</h2>
-					<SmallText>{workingHours.description}</SmallText>
+					<h2
+						data-aos="fade-up"
+						data-aos-delay="300">
+						{workingHours.header}
+					</h2>
+					<SmallText
+						data-aos="fade-up"
+						data-aos-delay="350">
+						{workingHours.description}
+					</SmallText>
 				</WorkingLayout>
 			</WorkingHours>
 		</ServicesContainer>

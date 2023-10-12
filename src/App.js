@@ -49,7 +49,7 @@ function App() {
 						}
 					/>
 				</Routes>
-				<Footer />
+				<Footer selectedLanguage={selectedLanguage} />
 			</div>
 		</Router>
 	);

@@ -50,18 +50,31 @@ const AboutUs = (props) => {
 		<AboutContainer>
 			<Header>
 				<HeaderLayout>
-					<h2>{header.main}</h2>
-					<h2>{header.sub}</h2>
+					<h2 data-aos="fade-up">{header.main}</h2>
+					<h2
+						data-aos="fade-up"
+						data-aos-delay="250">
+						{header.sub}
+					</h2>
 				</HeaderLayout>
 			</Header>
 			<AboutVideoSection>
 				<VideoSectionHeader>
-					<HeaderText>{videoSection.headerText}</HeaderText>
-					<SmallText style={{ width: "100%" }}>
+					<HeaderText
+						data-aos="fade-up"
+						data-aos-delay="100">
+						{videoSection.headerText}
+					</HeaderText>
+					<SmallText
+						style={{ width: "100%" }}
+						data-aos="fade-up"
+						data-aos-delay="200">
 						{videoSection.smallText}
 					</SmallText>
 				</VideoSectionHeader>
-				<VideoSection>
+				<VideoSection
+					data-aos="fade-up"
+					data-aos-delay="200">
 					<VideoContainer>
 						<video
 							id="aboutVideo"
@@ -84,7 +97,9 @@ const AboutUs = (props) => {
 					</VideoContainer>
 					<VideoDescription>
 						<VideoDescriptionList>
-							<VideoDescriptionListItems>
+							<VideoDescriptionListItems
+								data-aos="fade-right"
+								data-aos-delay="250">
 								<SmallText className="welcome">
 									{leaders.header}
 								</SmallText>
@@ -101,7 +116,9 @@ const AboutUs = (props) => {
 							<VideoDescriptionListItems></VideoDescriptionListItems>
 							<VideoDescriptionListItems></VideoDescriptionListItems>
 						</VideoDescriptionList>
-						<VideoDescriptionList>
+						<VideoDescriptionList
+							data-aos="fade-left"
+							data-aos-delay="250">
 							<VideoDescriptionListItems>
 								<SmallText className="welcome">
 									{ourStory.header}
@@ -123,7 +140,9 @@ const AboutUs = (props) => {
 				</VideoSection>
 			</AboutVideoSection>
 			<AboutValues>
-				<VideoSectionHeader>
+				<VideoSectionHeader
+					data-aos="fade-up"
+					data-aos-delay="100">
 					<HeaderText>{values.header}</HeaderText>
 					<SmallText style={{ width: "100%" }}>
 						{values.description}
@@ -131,7 +150,9 @@ const AboutUs = (props) => {
 				</VideoSectionHeader>
 				<AboutValue>
 					<AboutValueList>
-						<AboutValueListItems>
+						<AboutValueListItems
+							data-aos="fade-up"
+							data-aos-delay="150">
 							<ValueIcon>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +180,9 @@ const AboutUs = (props) => {
 								</SmallText>
 							</ValueIcon>
 						</AboutValueListItems>
-						<AboutValueListItems>
+						<AboutValueListItems
+							data-aos="fade-up"
+							data-aos-delay="200">
 							<ValueIcon>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +210,9 @@ const AboutUs = (props) => {
 								</SmallText>
 							</ValueIcon>
 						</AboutValueListItems>
-						<AboutValueListItems>
+						<AboutValueListItems
+							data-aos="fade-up"
+							data-aos-delay="250">
 							<ValueIcon>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -215,7 +240,9 @@ const AboutUs = (props) => {
 								</SmallText>
 							</ValueIcon>
 						</AboutValueListItems>
-						<AboutValueListItems>
+						<AboutValueListItems
+							data-aos="fade-up"
+							data-aos-delay="300">
 							{" "}
 							<ValueIcon>
 								<svg

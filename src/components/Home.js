@@ -942,7 +942,7 @@ const Home = (props) => {
 				{/* Right Section */}
 				<ContactRightSection
 					className="hidden"
-					data-aos="fade-left"
+					data-aos="fade-right"
 					data-aos-delay="100">
 					<ContactImage
 						src="https://Moamen112.github.io/dental/imgs/contact.svg"

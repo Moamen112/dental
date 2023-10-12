@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import contactContent from "../content/contactContent";
+import ARcontactContent from "../content/ARcontactContent";
 
 const Contact = (props) => {
 	useEffect(() => {
@@ -26,21 +28,27 @@ const Contact = (props) => {
 			AOS.refresh();
 		}
 	}, [props.selectedLanguage]);
+
+	const { header, contactInfo, contactForm } =
+		props.selectedLanguage === "AR" ? ARcontactContent : contactContent;
+
 	return (
 		<ContactContainer>
 			<Header>
 				<HeaderLayout>
-					<h2>We Are Ready To Assist You</h2>
+					<h2 data-aos="fade-up">{header.text}</h2>
 				</HeaderLayout>
 			</Header>
 			<ContactInfos>
-				<ContactHeader>
-					<SmallText className="welcome">Contact US</SmallText>
-					<HeaderText>Get In Touch With Us!</HeaderText>
+				<ContactHeader data-aos="fade-up">
+					<SmallText className="welcome">
+						{contactInfo.smallText}
+					</SmallText>
+					<HeaderText>{contactInfo.headerText}</HeaderText>
 				</ContactHeader>
 				<ContactInfo>
 					<ContactList>
-						<ContactListItems>
+						<ContactListItems data-aos="fade-right">
 							<ContactIcon>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -77,13 +85,15 @@ const Contact = (props) => {
 										stroke-linejoin="round"
 									/>
 								</svg>
-								<ContactHeaderText>Address</ContactHeaderText>
+								<ContactHeaderText>
+									{contactInfo.items.item1.title}
+								</ContactHeaderText>
 								<SmallText>
-									50 Gamal Abd El-Nasir Rd, Al Mandarah Bahri
+									{contactInfo.items.item1.description}
 								</SmallText>
 							</ContactIcon>
 						</ContactListItems>
-						<ContactListItems>
+						<ContactListItems data-aos="fade-up">
 							<ContactIcon>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -106,11 +116,15 @@ const Contact = (props) => {
 										stroke-linejoin="round"
 									/>
 								</svg>
-								<ContactHeaderText>Call Us</ContactHeaderText>
-								<SmallText>+01234 567 890</SmallText>
+								<ContactHeaderText>
+									{contactInfo.items.item2.title}
+								</ContactHeaderText>
+								<SmallText>
+									{contactInfo.items.item2.description}
+								</SmallText>
 							</ContactIcon>
 						</ContactListItems>
-						<ContactListItems>
+						<ContactListItems data-aos="fade-left">
 							{" "}
 							<ContactIcon>
 								<svg
@@ -134,9 +148,11 @@ const Contact = (props) => {
 										stroke-linejoin="round"
 									/>
 								</svg>
-								<ContactHeaderText>E-mail Us</ContactHeaderText>
+								<ContactHeaderText>
+									{contactInfo.items.item3.title}
+								</ContactHeaderText>
 								<SmallText>
-									nadaabdelnasser487@gmail.com
+									{contactInfo.items.item3.description}
 								</SmallText>
 							</ContactIcon>
 						</ContactListItems>
@@ -146,49 +162,59 @@ const Contact = (props) => {
 			<ContactForm>
 				<InputsContainer>
 					<InputContainer>
-						<Label htmlFor="name">Full Name *</Label>
+						<Label htmlFor="name">
+							{contactForm.inputs.input1.label}
+						</Label>
 						<TextInput
 							name="name"
 							type="text"
 							id="name"
-							placeholder="John David"
+							placeholder={contactForm.inputs.input1.placeholder}
 						/>
 					</InputContainer>
 					<InputContainer>
-						<Label htmlFor="name">Your Email *</Label>
+						<Label htmlFor="email">
+							{contactForm.inputs.input2.label}
+						</Label>
 						<TextInput
 							name="email"
 							type="text"
 							id="email"
-							placeholder="example@yourmail.com"
+							placeholder={contactForm.inputs.input2.placeholder}
 						/>
 					</InputContainer>
 					<InputContainer>
-						<Label htmlFor="name">Phone *</Label>
+						<Label htmlFor="phone">
+							{contactForm.inputs.input3.label}
+						</Label>
 						<TextInput
-							name="name"
+							name="phone"
 							type="text"
 							id="name"
-							placeholder="your number here"
+							placeholder={contactForm.inputs.input3.placeholder}
 						/>
 					</InputContainer>
 					<InputContainer>
-						<Label htmlFor="name">Subject *</Label>
+						<Label htmlFor="subject">
+							{contactForm.inputs.input4.label}
+						</Label>
 						<TextInput
-							name="name"
+							name="subject"
 							type="text"
 							id="name"
-							placeholder="How can we Help"
+							placeholder={contactForm.inputs.input4.placeholder}
 						/>
 					</InputContainer>
 				</InputsContainer>
 				<TextAreaContainer>
-					<Label htmlFor="help">We can help you?</Label>
+					<Label htmlFor="help">{contactForm.textArea.label}</Label>
 					<TextArea
 						id="help"
-						placeholder="Type your message here..."></TextArea>
+						placeholder={
+							contactForm.textArea.placeholder
+						}></TextArea>
 				</TextAreaContainer>
-				<Button>Send Message</Button>
+				<Button>{contactForm.button}</Button>
 			</ContactForm>
 		</ContactContainer>
 	);
