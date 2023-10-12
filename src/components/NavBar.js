@@ -18,27 +18,31 @@ const NavBar = (props) => {
 			<Logo className="logo"></Logo>
 
 			{/* Desktop Navigation */}
-			<NavList className={`menu ${mobileMenuVisible ? "show" : ""}`}>
+			<NavList
+				className={`menu ${mobileMenuVisible ? "show" : ""}`}
+				selectedLanguage={props.selectedLanguage}>
 				<NavItem
 					exact
 					to="/"
 					activeClassName="active">
-					Home
+					{props.selectedLanguage === "AR" ? "الرئيسية" : "Home"}
 				</NavItem>
 				<NavItem
 					to="/about"
 					activeClassName="active">
-					About us
+					{props.selectedLanguage === "AR" ? "نبذة عنا" : "About Us"}
 				</NavItem>
 				<NavItem
 					to="/services"
 					activeClassName="active">
-					Services
+					{props.selectedLanguage === "AR" ? "الخدمات" : "Services"}
 				</NavItem>
 				<NavItem
 					to="/contact"
 					activeClassName="active">
-					Contact Us
+					{props.selectedLanguage === "AR"
+						? "تواصل معنا"
+						: "Contact Us"}
 				</NavItem>
 			</NavList>
 
@@ -137,7 +141,7 @@ const NavBarContainer = styled.div`
 `;
 
 const Logo = styled.div`
-	background-image: url("/imgs/logo.svg");
+	background-image: url("https://Moamen112.github.io/dental/imgs/logo.svg");
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 100%;
@@ -150,6 +154,7 @@ const Logo = styled.div`
 `;
 
 const NavList = styled.ul`
+	direction: ${(props) => (props.selectedLanguage === "AR" ? "rtl" : "ltr")};
 	list-style: none;
 	display: flex;
 	width: 33%;
