@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -9,6 +9,8 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 
 const Home = (props) => {
+	const [isMobile, setIsMobile] = useState(false);
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		AOS.init({
@@ -31,6 +33,29 @@ const Home = (props) => {
 			AOS.refresh();
 		}
 	}, [props.selectedLanguage]);
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth <= 768) {
+				// You can adjust the threshold
+				setIsMobile(true);
+			} else {
+				setIsMobile(false);
+			}
+		};
+
+		// Initial check
+		handleResize();
+
+		// Add event listener for window resize
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			// Clean up the event listener
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
 	const {
 		header,
 		services,
@@ -325,7 +350,9 @@ const Home = (props) => {
 						/>
 						<FeatureService
 							data-aos={
-								props.selectedLanguage === "AR"
+								isMobile
+									? "fade-up"
+									: props.selectedLanguage === "AR"
 									? "fade-right"
 									: "fade-left"
 							}
@@ -958,6 +985,7 @@ const Home = (props) => {
 const HomeContainer = styled.div`
 	/* Add your container styles here */
 	padding-top: 80px;
+	box-sizing: border-box;
 
 	direction: ${(props) => (props.selectedLanguage === "AR" ? "rtl" : "ltr")};
 
@@ -965,7 +993,8 @@ const HomeContainer = styled.div`
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		font-weight: bold;
 		color: #3d75c3;
-		width: 28%;
+		width: 45%;
+		padding: 10px 0;
 		text-align: center;
 	}
 
@@ -1008,6 +1037,7 @@ const LeftSection = styled.div`
 		width: 80%;
 		align-items: center;
 		padding-top: 30px;
+		justify-content: center;
 		text-align: center;
 		gap: 10px;
 	}
@@ -1022,8 +1052,8 @@ const RightSection = styled.div`
 	order: 1;
 
 	@media (max-width: 768px) {
-		width: 100%;
-		padding-left: 30px;
+		width: 80%;
+		height: 520px;
 	}
 `;
 
@@ -1084,7 +1114,7 @@ const Services = styled.div`
 	@media (max-width: 768px) {
 		flex-direction: column;
 		gap: 5px;
-		padding-top: 80px;
+		padding-top: 150px;
 	}
 `;
 
@@ -1210,6 +1240,8 @@ const FeatureService = styled.div`
 
 	@media (max-width: 768px) {
 		bottom: -25%;
+		padding: 0;
+		width: 100%;
 	}
 `;
 
@@ -1360,7 +1392,8 @@ const FeatureMembers = styled.div`
 
 	.member-img1 {
 		width: 100%;
-		height: 100%;
+		height: 300px;
+		background-size: cover;
 		background-image: url("https://Moamen112.github.io/dental/imgs/member1.svg");
 	}
 
@@ -1373,7 +1406,7 @@ const FeatureMembers = styled.div`
 
 	@media (max-width: 768px) {
 		flex-direction: column;
-		padding-top: 30%;
+		padding-top: 35%;
 		gap: 20px;
 		align-items: center;
 	}
@@ -1404,6 +1437,7 @@ const FeatureMember = styled.div`
 	@media (max-width: 768px) {
 		order: 2;
 		width: 80%;
+		padding: 20px 0;
 	}
 `;
 const FeatureMembersDescription = styled.div`
