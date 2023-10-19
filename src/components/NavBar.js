@@ -75,22 +75,30 @@ const NavBar = (props) => {
 							onClick={handleMobileMenuClose}
 							to="/"
 							exact>
-							Home
+							{props.selectedLanguage === "AR"
+								? "الرئيسية"
+								: "Home"}
 						</MenuItem>
 						<MenuItem
 							onClick={handleMobileMenuClose}
 							to="/about">
-							About us
+							{props.selectedLanguage === "AR"
+								? "نبذة عنا"
+								: "About Us"}
 						</MenuItem>
 						<MenuItem
 							onClick={handleMobileMenuClose}
 							to="/services">
-							Services
+							{props.selectedLanguage === "AR"
+								? "الخدمات"
+								: "Services"}
 						</MenuItem>
 						<MenuItem
 							onClick={handleMobileMenuClose}
 							to="/contact">
-							Contact Us
+							{props.selectedLanguage === "AR"
+								? "تواصل معنا"
+								: "Contact Us"}
 						</MenuItem>
 					</MobileMenu>
 					{/* Language Buttons for Mobile */}
@@ -213,7 +221,7 @@ const LanguageButtons = styled.div`
 
 const LanguageButton = styled.button`
 	margin-left: 10px;
-	padding: 7px 20px;
+	padding: 7px 25px;
 	border-radius: 5px;
 	background: none;
 	border: none;
@@ -247,17 +255,19 @@ const HiddenContent = styled.div`
 
 const MobileMenu = styled.ul`
 	list-style: none;
-	padding: 0;
 	text-align: center;
+	width: 100%;
+	justify-content: center;
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
-	padding: 20px;
+	gap: 8px;
+	padding: 25px 0;
 `;
 
 // Define the MenuItem component
 const MenuItem = styled(NavLink)`
 	cursor: pointer;
+	text-align: center;
 	color: #000;
 	font-size: 18px;
 	text-decoration: none;

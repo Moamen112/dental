@@ -119,9 +119,7 @@ const Footer = (props) => {
 					<FooterListItems></FooterListItems>
 				</FooterList>
 			</FooterBody>
-			<FooterCopyRight
-				data-aos="fade-right"
-				data-aos-delay="450">
+			<FooterCopyRight>
 				<p>{copyright.text}</p>
 			</FooterCopyRight>
 		</FooterContainer>

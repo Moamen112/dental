@@ -83,7 +83,9 @@ const Home = (props) => {
 				<LeftSection
 					selectedLanguage={props.selectedLanguage}
 					data-aos="fade-right">
-					<SmallText className="welcome">
+					<SmallText
+						className="welcome"
+						selectedLanguage={props.selectedLanguage}>
 						{props.selectedLanguage === "AR"
 							? ARheader.welcome
 							: header.welcome}
@@ -98,7 +100,7 @@ const Home = (props) => {
 								: "Smiles..."}
 						</span>
 					</HeaderText>
-					<SmallText>
+					<SmallText selectedLanguage={props.selectedLanguage}>
 						{props.selectedLanguage === "AR"
 							? ARheader.description
 							: header.description}
@@ -134,7 +136,8 @@ const Home = (props) => {
 							? ARservices.service1.header
 							: services.service1.header}
 					</ServiceHeader>
-					<ServiceDescription>
+					<ServiceDescription
+						selectedLanguage={props.selectedLanguage}>
 						{props.selectedLanguage === "AR"
 							? ARservices.service1.description
 							: services.service1.description}
@@ -155,7 +158,8 @@ const Home = (props) => {
 							? ARservices.service2.header
 							: services.service2.header}
 					</ServiceHeader>
-					<ServiceDescription>
+					<ServiceDescription
+						selectedLanguage={props.selectedLanguage}>
 						{props.selectedLanguage === "AR"
 							? ARservices.service2.description
 							: services.service2.description}
@@ -176,7 +180,8 @@ const Home = (props) => {
 							? ARservices.service3.header
 							: services.service3.header}
 					</ServiceHeader>
-					<ServiceDescription>
+					<ServiceDescription
+						selectedLanguage={props.selectedLanguage}>
 						{props.selectedLanguage === "AR"
 							? ARservices.service3.description
 							: services.service3.description}
@@ -194,7 +199,9 @@ const Home = (props) => {
 						/>
 					</FeatureLeft>
 					<FeatureRight data-aos="fade-up">
-						<SmallText className="welcome responsiveText">
+						<SmallText
+							className="welcome responsiveText"
+							selectedLanguage={props.selectedLanguage}>
 							{props.selectedLanguage === "AR"
 								? ARfeatures.feature1.welcome
 								: features.feature1.welcome}
@@ -204,12 +211,12 @@ const Home = (props) => {
 								? ARfeatures.feature1.headerText
 								: features.feature1.headerText}
 						</HeaderText>
-						<SmallText>
+						<SmallText selectedLanguage={props.selectedLanguage}>
 							{props.selectedLanguage === "AR"
 								? ARfeatures.feature1.description
 								: features.feature1.description}
 						</SmallText>
-						<br />
+
 						<SmallText>
 							{props.selectedLanguage === "AR"
 								? ARfeatures.feature1.smallText
@@ -276,7 +283,7 @@ const Home = (props) => {
 								? ARfeatures.feature2.headerText
 								: features.feature2.headerText}
 						</HeaderText>
-						<SmallText>
+						<SmallText selectedLanguage={props.selectedLanguage}>
 							{props.selectedLanguage === "AR"
 								? ARfeatures.feature2.description
 								: features.feature2.description}
@@ -363,7 +370,9 @@ const Home = (props) => {
 									? ARfeatures.feature2.services.header
 									: features.feature2.services.header}
 							</HeaderText>
-							<SmallText className="feature-text">
+							<SmallText
+								className="feature-text"
+								selectedLanguage={props.selectedLanguage}>
 								{props.selectedLanguage === "AR"
 									? ARfeatures.feature2.services.description
 									: features.feature2.services.description}
@@ -466,7 +475,9 @@ const Home = (props) => {
 						<FeatureMembersDescription
 							data-aos="fade-up"
 							data-aos-delay="200">
-							<SmallText className="welcome">
+							<SmallText
+								className="welcome"
+								selectedLanguage={props.selectedLanguage}>
 								{props.selectedLanguage === "AR"
 									? ARfeatures.feature3.welcome
 									: features.feature3.welcome}
@@ -477,7 +488,8 @@ const Home = (props) => {
 									? ARfeatures.feature3.headerText
 									: features.feature3.headerText}
 							</HeaderText>
-							<SmallText>
+							<SmallText
+								selectedLanguage={props.selectedLanguage}>
 								{props.selectedLanguage === "AR"
 									? ARfeatures.feature3.description
 									: features.feature3.description}
@@ -583,7 +595,9 @@ const Home = (props) => {
 				<OfferingText
 					data-aos="fade-up"
 					data-aos-delay="100">
-					<SmallText className="welcome">
+					<SmallText
+						className="welcome"
+						selectedLanguage={props.selectedLanguage}>
 						{props.selectedLanguage === "AR"
 							? ARofferings.text.welcome
 							: offerings.text.welcome}
@@ -593,7 +607,9 @@ const Home = (props) => {
 							? ARofferings.text.header
 							: offerings.text.header}
 					</HeaderText>
-					<SmallText style={{ width: "80%" }}>
+					<SmallText
+						style={{ width: "80%" }}
+						selectedLanguage={props.selectedLanguage}>
 						{props.selectedLanguage === "AR"
 							? ARofferings.text.description
 							: offerings.text.description}
@@ -833,7 +849,9 @@ const Home = (props) => {
 				<ReviewsText
 					data-aos="fade-up"
 					data-aos-delay="100">
-					<SmallText className="welcome">
+					<SmallText
+						className="welcome"
+						selectedLanguage={props.selectedLanguage}>
 						{props.selectedLanguage === "AR"
 							? ARreviews.text.welcome
 							: reviews.text.welcome}
@@ -843,7 +861,9 @@ const Home = (props) => {
 							? ARreviews.text.header
 							: reviews.text.header}
 					</HeaderText>
-					<SmallText style={{ width: "80%" }}>
+					<SmallText
+						style={{ width: "80%" }}
+						selectedLanguage={props.selectedLanguage}>
 						{props.selectedLanguage === "AR"
 							? ARreviews.text.description
 							: reviews.text.description}
@@ -939,7 +959,9 @@ const Home = (props) => {
 			</ReviewsContainer>
 			<ContactContainer selectedLanguage={props.selectedLanguage}>
 				<ContactLeftSection selectedLanguage={props.selectedLanguage}>
-					<SmallText className="welcome">
+					<SmallText
+						className="welcome"
+						selectedLanguage={props.selectedLanguage}>
 						{props.selectedLanguage === "AR"
 							? ARcontact.left.welcome
 							: contact.left.welcome}
@@ -986,16 +1008,18 @@ const HomeContainer = styled.div`
 	/* Add your container styles here */
 	padding-top: 80px;
 	box-sizing: border-box;
-
 	direction: ${(props) => (props.selectedLanguage === "AR" ? "rtl" : "ltr")};
 
 	.welcome {
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		font-weight: bold;
 		color: #3d75c3;
-		width: 45%;
-		padding: 10px 0;
+		width: 30%;
+		padding: 14px 5px;
 		text-align: center;
+		@media (max-width: 768px) {
+			width: 45%;
+		}
 	}
 
 	.hidden {
@@ -1030,13 +1054,13 @@ const LeftSection = styled.div`
 	gap: 20px;
 
 	@media (max-width: 1200px) {
-		padding: 0 0px 0 10%;
+		padding: 0;
 	}
 
 	@media (max-width: 768px) {
 		width: 80%;
 		align-items: center;
-		padding-top: 30px;
+		padding-top: 0px;
 		justify-content: center;
 		text-align: center;
 		gap: 10px;
@@ -1052,13 +1076,14 @@ const RightSection = styled.div`
 	order: 1;
 
 	@media (max-width: 768px) {
-		width: 80%;
-		height: 520px;
+		width: 100%;
+		height: 270px;
 	}
 `;
 
 const SmallText = styled.div`
-	font-size: 14px;
+	font-size: ${(props) =>
+		props.selectedLanguage === "AR" ? "18px" : "14px"};
 	color: #333;
 	padding: 10px 5px;
 `;
@@ -1101,7 +1126,7 @@ const HeaderImage = styled.img`
 	height: 100%;
 
 	@media (max-width: 1200px) {
-		width: 70%;
+		width: 80%;
 	}
 `;
 
@@ -1148,7 +1173,8 @@ const ServiceHeader = styled.h2`
 `;
 
 const ServiceDescription = styled.p`
-	font-size: 14px;
+	font-size: ${(props) =>
+		props.selectedLanguage === "AR" ? "18px" : "14px"};
 	text-align: center;
 	width: 80%;
 	color: #777;
@@ -1255,6 +1281,7 @@ const FeatureServiceList = styled.ul`
 	gap: 10px;
 
 	@media (max-width: 768px) {
+		gap: 5px;
 	}
 `;
 
