@@ -391,8 +391,12 @@ const ServicesContainer = styled.section`
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		font-weight: bold;
 		color: #3d75c3;
-		width: 28%;
+		width: 30%;
+		padding: 14px 5px;
 		text-align: center;
+		@media (max-width: 768px) {
+			width: 45%;
+		}
 	}
 
 	.hidden {
