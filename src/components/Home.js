@@ -363,7 +363,7 @@ const Home = (props) => {
 									? "fade-right"
 									: "fade-left"
 							}
-							data-aos-delay="350"
+							data-aos-delay="150"
 							selectedLanguage={props.selectedLanguage}>
 							<HeaderText className="feature-header">
 								{props.selectedLanguage === "AR"
@@ -1266,8 +1266,9 @@ const FeatureService = styled.div`
 
 	@media (max-width: 768px) {
 		bottom: -25%;
-		padding: 0;
+		padding: 0 20px;
 		width: 100%;
+		left: -23px;
 	}
 `;
 
@@ -1276,7 +1277,6 @@ const FeatureServiceList = styled.ul`
 	display: flex;
 	flex-direction: column;
 	padding: 0;
-
 	align-items: center;
 	gap: 10px;
 
