@@ -514,7 +514,8 @@ const Home = (props) => {
 							alt="Counter 1"
 						/>
 						<CounterDesc>
-							<CounterNumber>
+							<CounterNumber
+								selectedLanguage={props.selectedLanguage}>
 								{counters.counter1.number}
 								<span>+</span>
 							</CounterNumber>
@@ -535,11 +536,13 @@ const Home = (props) => {
 							alt="Counter 2"
 						/>
 						<CounterDesc>
-							<CounterNumber>
+							<CounterNumber
+								selectedLanguage={props.selectedLanguage}>
 								{counters.counter2.number}
 								<span>+</span>
 							</CounterNumber>
-							<CounterName>
+							<CounterName
+								selectedLanguage={props.selectedLanguage}>
 								{props.selectedLanguage === "AR"
 									? ARcounters.counter2.name
 									: counters.counter2.name}
@@ -556,7 +559,8 @@ const Home = (props) => {
 							alt="Counter 3"
 						/>
 						<CounterDesc>
-							<CounterNumber>
+							<CounterNumber
+								selectedLanguage={props.selectedLanguage}>
 								{counters.counter3.number}
 								<span>+</span>
 							</CounterNumber>
@@ -577,7 +581,8 @@ const Home = (props) => {
 							alt="Counter 4"
 						/>
 						<CounterDesc>
-							<CounterNumber>
+							<CounterNumber
+								selectedLanguage={props.selectedLanguage}>
 								{counters.counter4.number}
 								<span>+</span>
 							</CounterNumber>
@@ -1519,7 +1524,7 @@ const Counter = styled.div`
 	gap: 10px;
 
 	@media (max-width: 768px) {
-		width: 50%;
+		width: 80%;
 		align-items: center;
 		justify-content: center;
 	}
@@ -1547,7 +1552,12 @@ const CounterNumber = styled.div`
 	span {
 		color: #3d75c3;
 		font-size: 40px;
-		padding: 0 0 0 5px;
+		padding: ${(props) =>
+			props.selectedLanguage === "AR" ? "0 5px 0 0px" : "0 0 0 5px"};
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
 	}
 `;
 
@@ -1555,6 +1565,7 @@ const CounterName = styled.div`
 	font-size: 16px;
 	color: #636571;
 	margin-top: 10px;
+	width: 100%;
 `;
 
 // Styled components for the Offering section

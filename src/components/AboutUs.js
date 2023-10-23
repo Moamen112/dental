@@ -47,7 +47,7 @@ const AboutUs = (props) => {
 	}, [props.selectedLanguage]);
 
 	return (
-		<AboutContainer>
+		<AboutContainer selectedLanguage={props.selectedLanguage}>
 			<Header>
 				<HeaderLayout>
 					<h2 data-aos="fade-up">{header.main}</h2>
@@ -98,18 +98,26 @@ const AboutUs = (props) => {
 					<VideoDescription>
 						<VideoDescriptionList>
 							<VideoDescriptionListItems
-								data-aos="fade-right"
+								selectedLanguage={props.selectedLanguage}
+								data-aos="fade-up"
 								data-aos-delay="250">
-								<SmallText className="welcome">
+								<SmallText
+									className="welcome"
+									selectedLanguage={props.selectedLanguage}>
 									{leaders.header}
 								</SmallText>
-								<VideoHeaderText>
+								<VideoHeaderText
+									selectedLanguage={props.selectedLanguage}>
 									{leaders.headerText}
 								</VideoHeaderText>
-								<SmallText className="vid">
+								<SmallText
+									className="vid"
+									selectedLanguage={props.selectedLanguage}>
 									{leaders.description1}
 								</SmallText>
-								<SmallText className="vid">
+								<SmallText
+									className="vid"
+									selectedLanguage={props.selectedLanguage}>
 									{leaders.description2}
 								</SmallText>
 							</VideoDescriptionListItems>
@@ -117,13 +125,17 @@ const AboutUs = (props) => {
 							<VideoDescriptionListItems></VideoDescriptionListItems>
 						</VideoDescriptionList>
 						<VideoDescriptionList
-							data-aos="fade-left"
+							data-aos="fade-up"
 							data-aos-delay="250">
-							<VideoDescriptionListItems>
-								<SmallText className="welcome">
+							<VideoDescriptionListItems
+								selectedLanguage={props.selectedLanguage}>
+								<SmallText
+									className="welcome"
+									selectedLanguage={props.selectedLanguage}>
 									{ourStory.header}
 								</SmallText>
-								<VideoHeaderText>
+								<VideoHeaderText
+									selectedLanguage={props.selectedLanguage}>
 									{ourStory.headerText}
 								</VideoHeaderText>
 								<SmallText className="vid">
@@ -280,6 +292,7 @@ const AboutUs = (props) => {
 
 const AboutContainer = styled.section`
 	padding-top: 80px;
+	direction: ${(props) => (props.selectedLanguage === "AR" ? "rtl" : "ltr")};
 
 	.welcome {
 		border: 1px solid rgba(0, 0, 0, 0.1);
@@ -380,7 +393,14 @@ const VideoDescriptionListItems = styled.li`
 	gap: 20px;
 
 	.vid {
-		text-align: left;
+		text-align: ${(props) =>
+			props.selectedLanguage === "AR" ? "right" : "left"};
+
+		@media (max-width: 768px) {
+			text-align: ${(props) =>
+				props.selectedLanguage === "AR" ? "right" : "left"};
+			width: 95%;
+		}
 	}
 
 	.desc {
@@ -400,6 +420,8 @@ const VideoHeaderText = styled.div`
 	flex-shrink: 0;
 	color: #1c1c1c;
 	font-family: Manrope;
+	text-align: ${(props) =>
+		props.selectedLanguage === "AR" ? "right" : "left"};
 	font-size: 30px;
 	font-style: normal;
 	font-weight: 700;
@@ -488,7 +510,8 @@ const SmallText = styled.div`
 
 const HeaderText = styled.div`
 	color: #1c1c1c;
-	text-align: center;
+	text-align: ${(props) =>
+		props.selectedLanguage === "AR" ? "right" : "center"};
 	font-family: Manrope;
 	font-size: 40px;
 	font-style: normal;
