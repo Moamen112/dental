@@ -1,6 +1,6 @@
 const ARfooterContent = {
 	about: {
-		text: "نص عن القدم",
+		text: "رفع الابتسامات، تعزيز الحياة",
 	},
 	helpfulLinks: {
 		title: "روابط مفيدة",
@@ -22,9 +22,9 @@ const ARfooterContent = {
 	},
 	contactUs: {
 		title: "اتصل بنا",
-		email: "nadaabdelnasser487@gmail.com",
+		email: "matag_company@gmail.com",
 		address: "٥٠ شارع جمال عبد الناصر، المندرة البحري",
-		phone: "+٠١٢٣٤ ٥٦٧ ٨٩٠",
+		phone: "+٩٦٦ ٥٥ ٦٤١ ٨٩١٨",
 	},
 	copyright: {
 		text: "حقوق النشر © ٢٠٢٣. كل الحقوق محفوظة",

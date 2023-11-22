@@ -7,49 +7,49 @@ const ArservicesContent = {
 		smallText: "خدماتنا",
 		headerText: "الخدمات",
 		description:
-			"لوريم إيبسوم دولور سيت أميت، كونسكتيتور أديبيسينغ إيليت. آينيان كومودو ليجولا آينيان ماسا.",
+			"اكتشف عالمًا من الخدمات الطبية الشاملة في [اسم العيادة]. من الفحوصات الروتينية إلى العلاجات المتقدمة، نقدم مجموعة واسعة من الخدمات مصممة خصيصًا لتلبية احتياجاتك الطبية الفريدة. التفاني في العناية بصحتك الفموية لدينا لا يتزعزع، ونحن هنا لتقديم الخدمات عالية الجودة التي تستحقها.",
 		offerings: {
 			offering1: {
 				imageSrc: "https://Moamen112.github.io/dental/imgs/offer2.svg",
 				altText: "العرض 2",
 				title: "فحص الأسنان",
 				offeringDescription:
-					"لوريم إيبسوم دولور سيت أميت، كونسكتيتور أديبيسينغ إيليت",
+					"تأكد من أن ابتسامتك تظل صحية مع فحص أسناننا الشامل.",
 			},
 			offering2: {
 				imageSrc: "https://Moamen112.github.io/dental/imgs/offer2.svg",
 				altText: "العرض 2",
 				title: "تبييض الأسنان",
 				offeringDescription:
-					"لوريم إيبسوم دولور سيت أميت، كونسكتيتور أديبيسينغ إيليت",
+					"اجعل ابتسامتك أكثر إشراقًا مع خدماتنا المتخصصة في تبييض الأسنان.",
 			},
 			offering3: {
 				imageSrc: "https://Moamen112.github.io/dental/imgs/offer3.svg",
 				altText: "العرض 2",
 				title: "فحص طبي للأسنان",
 				offeringDescription:
-					"لوريم إيبسوم دولور سيت أميت، كونسكتيتور أديبيسينغ إيليت",
+					"حوّل ابتسامتك بدقة وعناية من خلال تقويم الأسنان.",
 			},
 			offering4: {
 				imageSrc: "https://Moamen112.github.io/dental/imgs/offer4.svg",
 				altText: "العرض 2",
 				title: "زراعة الأسنان",
 				offeringDescription:
-					"لوريم إيبسوم دولور سيت أميت، كونسكتيتور أديبيسينغ إيليت",
+					"حوّل ابتسامتك باستخدام زراعة الأسنان الخبيرة لدينا.",
 			},
 			offering5: {
 				imageSrc: "https://Moamen112.github.io/dental/imgs/offer5.svg",
 				altText: "العرض 2",
 				title: "ملء الأسنان",
 				offeringDescription:
-					"لوريم إيبسوم دولور سيت أميت، كونسكتيتور أديبيسينغ إيليت",
+					"استعيد صحة وجمال ابتسامتك مع خدماتنا الخبيرة في حشو الأسنان.",
 			},
 			offering6: {
 				imageSrc: "https://Moamen112.github.io/dental/imgs/offer6.svg",
 				altText: "العرض 2",
 				title: "تجميل الأسنان",
 				offeringDescription:
-					"لوريم إيبسوم دولور سيت أميت، كونسكتيتور أديبيسينغ إيليت",
+					"رفع مستوى ابتسامتك مع خدماتنا في طب الأسنان التجميلي.",
 			},
 		},
 	},

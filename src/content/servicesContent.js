@@ -7,49 +7,49 @@ const servicesContent = {
 		smallText: "Our Services",
 		headerText: "Services",
 		description:
-			"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula aenean massa.",
+			"Discover a world of comprehensive dental services at [Clinic Name]. From routine check-ups to advanced treatments, we offer a wide range of services tailored to meet your unique dental needs. Our commitment to your oral health is unwavering, and we're here to provide the quality services you deserve.",
 		offerings: {
 			offering1: {
 				imageSrc: "https://Moamen112.github.io/dental/imgs/offer2.svg",
 				altText: "Offering 2",
 				title: "Teeth Checkup",
 				offeringDescription:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"Ensure your smile stays healthy with our thorough teeth checkup.",
 			},
 			offering2: {
 				imageSrc: "https://Moamen112.github.io/dental/imgs/offer2.svg",
 				altText: "Offering 2",
 				title: "Teeth Whitening",
 				offeringDescription:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"Brighten your smile with our professional teeth whitening services.",
 			},
 			offering3: {
 				imageSrc: "https://Moamen112.github.io/dental/imgs/offer3.svg",
 				altText: "Offering 2",
-				title: "Dental Checkup",
+				title: "Dental Braces",
 				offeringDescription:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"Transform your smile with precision and care through dental braces.",
 			},
 			offering4: {
 				imageSrc: "https://Moamen112.github.io/dental/imgs/offer4.svg",
 				altText: "Offering 2",
 				title: "Teeth Implants",
 				offeringDescription:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"Transform your smile with our expert teeth implants.",
 			},
 			offering5: {
 				imageSrc: "https://Moamen112.github.io/dental/imgs/offer5.svg",
 				altText: "Offering 2",
 				title: "Dental Filling",
 				offeringDescription:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"Restore your smile's health and beauty with our expert dental filling services.",
 			},
 			offering6: {
 				imageSrc: "https://Moamen112.github.io/dental/imgs/offer6.svg",
 				altText: "Offering 2",
 				title: "Cosmetic",
 				offeringDescription:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"Elevate your smile with our cosmetic dentistry services.",
 			},
 		},
 	},

@@ -1,6 +1,6 @@
 const footerContent = {
 	about: {
-		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		text: "Elevating Smiles, Enhancing Lives.",
 	},
 	helpfulLinks: {
 		title: "Helpful Links",
@@ -22,12 +22,12 @@ const footerContent = {
 	},
 	contactUs: {
 		title: "Contact Us",
-		email: "nadaabdelnasser487@gmail.com",
+		email: "matag_company@gmail.com",
 		address: "50 Gamal Abd El-Nasir Rd, Al Mandarah Bahri",
-		phone: "+01234 567 890",
+		phone: "+966 55 641 8918",
 	},
 	copyright: {
-		text: "Copyright © 2023. All rights reserved",
+		text: "Copyright © 2023. All rights reserved.",
 	},
 };
 

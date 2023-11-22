@@ -81,19 +81,19 @@ const AboutUs = (props) => {
 							controls={isPlaying ? "controls" : ""}
 							poster="https://Moamen112.github.io/dental/imgs/videoPhoto.svg">
 							<source
-								src="https://Moamen112.github.io/dental/imgs/video.mp4"
+								src=""
 								type="video/mp4"
 							/>
 							Your browser does not support the video tag.
 						</video>
-						{!isPlaying && (
+						{/* {!isPlaying && (
 							<PlayButton onClick={toggleVideo}>
 								<PlayCircleOutlineIcon
 									fontSize="large"
 									style={{ color: "#000" }}
 								/>
 							</PlayButton>
-						)}
+						)} */}
 					</VideoContainer>
 					<VideoDescription>
 						<VideoDescriptionList>

@@ -14,15 +14,13 @@ const aboutUsContent = {
 		header: "The Leaders",
 		headerText: "We have the best Pharma & Medical",
 		description1:
-			"Collaboratively administrate empowered markets via plug-and-play networks. Users after installed base benefits. Dramatically visualize customer.",
-		description2:
-			"Collaboratively administrate empowered markets via plug-and-play networks. Users after installed base benefits. Dramatically visualize customer.",
+			"Welcome to our comprehensive healthcare center where we offer the finest in both pharmaceutical and medical services. At [Clinic/Center Name], we take pride in delivering top-notch care to address your medical needs, making us your trusted destination for all things health-related."
 	},
 	ourStory: {
 		header: "Our Story",
 		headerText: "Our mission is to help patients live better. ",
 		description:
-			"Collaboratively administrate empowered markets via plug-and-play networks. Users after installed base benefits. Dramatically visualize customer.",
+			"At [ClinicName], our mission is clear: to help our patients live better. With a focus on holistic care and excellence in both dental and medical services, we are dedicated to improving your well-being and enhancing your quality of life.",
 		lists: {
 			list1: "Over 400 leading hospitals and clinics",
 			list2: "Trusted doctors across 20+ specialties",
@@ -38,22 +36,22 @@ const aboutUsContent = {
 		value1: {
 			icon: "Bio Technology",
 			description:
-				"Our team of highly trained professionals uses the latest healing technologies.",
+				"Incorporating cutting-edge biotechnology, we save you time and enhance your experience.",
 		},
 		value2: {
 			icon: "Vaccine",
 			description:
-				"Our team of highly trained professionals uses the latest healing technologies.",
+				"In our commitment to health and safety and contributing to a healthier tomorrow for all of you.",
 		},
 		value3: {
 			icon: "Latest Technology",
 			description:
-				"Our team of highly trained professionals uses the latest healing technologies.",
+				"Embracing the future of healthcare, we pride ourselves in staying at the forefront of innovation.",
 		},
 		value4: {
 			icon: "Expert Doctors",
 			description:
-				"Our team of highly trained professionals uses the latest healing technologies.",
+				"We maximize your time by partnering with expert doctors. Your health is too important for us.",
 		},
 	},
 };

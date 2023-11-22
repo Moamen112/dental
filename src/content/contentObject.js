@@ -1,29 +1,30 @@
+// هنا كونتنت صفحة الهوم
 const contentObject = {
 	header: {
 		welcome: "👋Hey! We Are Dentic",
 		headerText: "Your trusted partner for healthy and beautiful ",
 		description:
-			"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.",
-		button: "Show More..",
+			"Step into of vibrant smiles and exceptional dental care at [Clinic Name]. We're not just a dental clinic; we're your partners in confidence, delivering the brilliance of a captivating smile.",
+		button: "Discover More..",
 	},
 	services: {
 		service1: {
 			icon: "https://Moamen112.github.io/dental/imgs/services1.svg",
 			header: "Affordable Price",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus nec.",
+				"We're here to provide affordable, high-quality dental solutions to meet your needs.",
 		},
 		service2: {
 			icon: "https://Moamen112.github.io/dental/imgs/services2.svg",
 			header: "Professional Dentist",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus nec.",
+				"We dedicated to your oral health and well-being.",
 		},
 		service3: {
 			icon: "https://Moamen112.github.io/dental/imgs/services3.svg",
 			header: "Satisfactory Service",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus nec.",
+				"Our goal is to provide a level of service that not only meets but exceeds your expectations.",
 		},
 	},
 	features: {
@@ -31,9 +32,9 @@ const contentObject = {
 			welcome: "More About Us",
 			headerText: "The Best Dental Clinic That You Can Trust",
 			description:
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.",
+				"When it comes to your oral health, trust is paramount. At [Clinic Name], we take pride in being the dental clinic you can unquestionably trust.",
 			smallText:
-				"Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.",
+				"Our unwavering commitment to excellence, a team of skilled professionals, and a track record of satisfied patients make us the best choice for all your dental needs. Experience the difference with a dental clinic that earns your trust every day.",
 			featureList: {
 				featureList1: {
 					icon: "https://Moamen112.github.io/dental/imgs/feature1.svg",
@@ -58,11 +59,11 @@ const contentObject = {
 			welcome: "Why Choose Us",
 			headerText: "Helping Your Dental Problems",
 			description:
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.",
+				"Our dedicated team of dental experts is ready to address your concerns and provide tailored solutions for a healthier, happier smile. Your dental well-being is our primary focus, and we're committed to helping you achieve the best possible oral health.",
 			percentages: {
 				percentage1: {
 					title: "Dental and Mouth Care",
-					percentage: 50,
+					percentage: 70,
 				},
 				percentage2: {
 					title: "Cosmetic Treatment",
@@ -73,7 +74,7 @@ const contentObject = {
 				image: "https://Moamen112.github.io/dental/imgs/feature2.svg",
 				header: "Don't Hesitate to Do Consultation",
 				description:
-					"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.",
+					"Your dental health matters, and we encourage you not to hesitate when it comes to seeking a consultation.",
 				schedule: {
 					schedule1: {
 						day: "Monday - Friday",
@@ -95,7 +96,7 @@ const contentObject = {
 			welcome: "Our Doctors",
 			headerText: "Our Experienced Doctors",
 			description:
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.",
+				"You can trust your smile in the hands of our experienced doctors. With a wealth of knowledge and a commitment to your well-being, our dental professionals are dedicated to providing top-notch care and expertise to ensure your oral health is in the best possible hands.",
 			button: "View more",
 
 			members: {
@@ -137,44 +138,44 @@ const contentObject = {
 			welcome: "Our Services",
 			header: "Services",
 			description:
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula aenean massa.",
+				"We offer a wide range of services tailored to meet your unique dental needs. Our commitment to your oral health is unwavering, and we're here to provide the quality services you deserve.",
 		},
 		boxes: {
 			box1: {
 				image: "https://Moamen112.github.io/dental/imgs/offer2.svg",
 				title: "Teeth Checkup",
 				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"Ensure your smile stays healthy with our thorough teeth checkup.",
 			},
 			box2: {
 				image: "https://Moamen112.github.io/dental/imgs/offer2.svg",
 				title: "Teeth Whitening",
 				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"Brighten your smile with our professional teeth whitening services.",
 			},
 			box3: {
 				image: "https://Moamen112.github.io/dental/imgs/offer3.svg",
 				title: "Dental Checkup",
 				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"Transform your smile with precision and care through dental brace.",
 			},
 			box4: {
 				image: "https://Moamen112.github.io/dental/imgs/offer4.svg",
 				title: "Teeth Implants",
 				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"Transform your smile with our expert teeth implants.",
 			},
 			box5: {
 				image: "https://Moamen112.github.io/dental/imgs/offer5.svg",
 				title: "Dental Filling",
 				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"Restore your smile's health and beauty with our expert dental filling services.",
 			},
 			box6: {
 				image: "https://Moamen112.github.io/dental/imgs/offer6.svg",
 				title: "Cosmetic",
 				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"Elevate your smile with our cosmetic dentistry services.",
 			},
 		},
 	},
@@ -191,30 +192,30 @@ const contentObject = {
 				name: "Muhammed Kamal",
 				icon: "https://Moamen112.github.io/dental/imgs/review.svg",
 				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"I can't thank [Clinic Name] enough for their exceptional care. The team is friendly, and the results of my treatment exceeded my expectations.",
 			},
 			box2: {
 				image: "https://Moamen112.github.io/dental/imgs/review2.svg",
-				name: "Muhammed Kamal",
-				icon: "https://Moamen112.github.io/dental/imgs/review.svg",
-				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-			},
-			box3: {
-				image: "https://Moamen112.github.io/dental/imgs/review3.svg",
 				name: "Nada Abdelnasser",
 				icon: "https://Moamen112.github.io/dental/imgs/review.svg",
 				description:
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+					"I was nervous about my dental procedure, but [Clinic Name] made me feel comfortable throughout the process.",
+			},
+			box3: {
+				image: "https://Moamen112.github.io/dental/imgs/review3.svg",
+				name: "Ahmed Kamal",
+				icon: "https://Moamen112.github.io/dental/imgs/review.svg",
+				description:
+					"I've been a patient at [Clinic Name] for years, and the consistent quality of care is what keeps me coming back.",
 			},
 		},
 	},
 	contact: {
 		left: {
 			welcome: "Contact Us",
-			text: "Your trusted partner for healthy and beautiful",
+			text: "Your trusted partner for healthy and beautiful ",
 			description:
-				"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.",
+				"Join our family of happy clients at [Clinic Name] and experience exceptional dental care that will leave you smiling.",
 			button: "Show More..",
 		},
 		right: {
