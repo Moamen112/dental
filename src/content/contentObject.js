@@ -89,7 +89,7 @@ const contentObject = {
 						hours: "8AM - 10PM",
 					},
 				},
-				button: "Call +01234 567 890",
+				button: "Call +966 55 641 8918",
 			},
 		},
 		feature3: {
